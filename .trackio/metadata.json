@@ -1,0 +1,21 @@
+{
+  "space_id": "DineshAI/U1bxeLQLaK",
+  "title": "Repro - Momentum SGD under Nonstationary Drift",
+  "openreview_id": "U1bxeLQLaK",
+  "arxiv_id": "2601.12238",
+  "paper": {
+    "openreview_id": "U1bxeLQLaK",
+    "arxiv_id": "2601.12238"
+  },
+  "tags": ["icml2026-repro", "paper-U1bxeLQLaK"],
+  "private": false,
+  "autosync": false,
+  "local_path_artifacts": [{
+    "path": "outputs/evidence_bundle.jsonl",
+    "abs_path": "/home/dineshai/Drives/Code/AllCode/ReproduceICML/papers/icml26-repro-U1bxeLQLaK-momentum-nonstationary/outputs/evidence_bundle.jsonl",
+    "size": 35953,
+    "artifact_type": "dataset"
+  }],
+  "local_artifacts": [],
+  "last_page": "conclusion"
+}

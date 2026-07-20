@@ -1,0 +1,30 @@
+{
+  "paper": "U1bxeLQLaK",
+  "claim_count": 3,
+  "verified_claims": 3,
+  "possible_points": 6,
+  "earned_points": 6,
+  "all_claims_complete": true,
+  "claims": {
+    "C1_explicit_drift_amplification": {
+      "passed": true,
+      "beta_low": 0.5,
+      "beta_high": 0.999,
+      "drift_floor_ratio": 89940009999.99966,
+      "response_time_ratio": 501.375
+    },
+    "C2_drift_dominated_sgd_beats_momentum": {
+      "passed": true,
+      "full_method_cells": 108,
+      "full_trials": 2160,
+      "sgd_wins": 36,
+      "scenarios": 36
+    },
+    "C3_inertia_lower_bound_mechanism": {
+      "passed": true,
+      "block_regret_ratio": 526.970956784501,
+      "inertia_window_ratio": 501.375,
+      "source_theorem": "Theorem 3.9"
+    }
+  }
+}

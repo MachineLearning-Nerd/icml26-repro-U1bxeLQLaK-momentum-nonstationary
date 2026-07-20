@@ -1,0 +1,10 @@
+{
+  "openreview_id": "U1bxeLQLaK",
+  "arxiv_id": "2601.12238",
+  "claims_sha256": "af5ab2d62f786ae36861957cbd08b4188f6d4c86e67152becc661a9c5bbb9d57",
+  "claims": [
+    "Momentum SGD incurs explicit drift-amplification penalty under distribution shift that diverges as momentum parameter beta approaches 1.",
+    "In drift-dominated regimes, vanilla SGD provably outperforms accelerated counterparts.",
+    "Provides minimax lower bounds proving momentum-induced tracking penalty is an information-theoretic barrier, not analytical artifact."
+  ]
+}
