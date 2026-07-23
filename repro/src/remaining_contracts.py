@@ -1181,7 +1181,7 @@ def _claim5_falsification_audit(
             "paper_kappa1000_sgd_prediction_tracking": 1064.5,
             "sgd_endpoint_ratio": 1064.5 / 28.31,
             "contradicts_absolute_sgd_robustness": True,
-            "contradicts_exact_comparative_wording": False,
+            "contradicts_exact_descriptive_claim": False,
             "rejection_reason": (
                 "The source says comparatively robust; HB and NAG degrade by "
                 "still larger endpoint factors, so absolute SGD degradation is "
