@@ -4,6 +4,7 @@ from __future__ import annotations
 import csv
 from pathlib import Path
 
+from exact_contracts import run_exact_contracts
 from theory_certificates import block_switch_regret, jump_response_time, stationary_hb_variance, theorem33_drift_term, theorem33_stability_cap
 
 ROOT=Path(__file__).resolve().parents[2]
@@ -19,6 +20,7 @@ def main() -> None:
     with (ROOT/"outputs"/"theory_certificates.csv").open("w",newline="") as handle:
         writer=csv.DictWriter(handle,fieldnames=list(rows[0]));writer.writeheader();writer.writerows(rows)
     print("certificate rows",len(rows),"response ratio",rows[-1]["jump_response_steps"]/rows[0]["jump_response_steps"])
+    run_exact_contracts()
 
 
 if __name__ == "__main__":

@@ -28,7 +28,22 @@ def main()->None:
                 for row in csv.DictReader(f):emit({"type":kind,**row})
     gate={"paper":"U1bxeLQLaK","tests_passed":True,"claims_verified":report["verified_claims"],"claims_total":report["claim_count"],"earned_points":report["earned_points"],"possible_points":report["possible_points"],"all_claims_complete":report["all_claims_complete"],"publication_gate_passed":report["all_claims_complete"],"bundle_bytes":bundle.stat().st_size,"bundle_sha256":digest(bundle)}
     (OUT/"PUBLICATION_GATE_PASSED.json").write_text(json.dumps(gate,indent=2)+"\n")
+    artifact_root=ROOT/".openresearch"/"artifacts"
+    artifact_files=sorted(
+        path for path in artifact_root.rglob("*")
+        if path.is_file() and path.suffix.lower() in {".json",".csv",".md",".txt",".jsonl"}
+    ) if artifact_root.exists() else []
+    artifact_manifest={
+        str(path.relative_to(ROOT)):{"sha256":digest(path),"bytes":path.stat().st_size}
+        for path in artifact_files
+    }
+    (OUT/"artifact_manifest.json").write_text(json.dumps(artifact_manifest,indent=2,sort_keys=True)+"\n")
     print(json.dumps(gate,indent=2))
+    print(json.dumps({
+        "artifact_file_count":len(artifact_manifest),
+        "artifact_manifest_sha256":digest(OUT/"artifact_manifest.json"),
+        "artifact_paths":list(artifact_manifest),
+    },indent=2))
 
 
 if __name__=="__main__":main()
