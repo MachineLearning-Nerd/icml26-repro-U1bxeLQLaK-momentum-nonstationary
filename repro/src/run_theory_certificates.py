@@ -6,6 +6,7 @@ from pathlib import Path
 
 from exact_contracts import run_exact_contracts
 from pathwise_contracts import run_pathwise_contracts
+from remaining_contracts import run_remaining_contracts
 from theory_certificates import block_switch_regret, jump_response_time, stationary_hb_variance, theorem33_drift_term, theorem33_stability_cap
 
 ROOT=Path(__file__).resolve().parents[2]
@@ -23,6 +24,7 @@ def main() -> None:
     print("certificate rows",len(rows),"response ratio",rows[-1]["jump_response_steps"]/rows[0]["jump_response_steps"])
     run_exact_contracts()
     run_pathwise_contracts()
+    run_remaining_contracts()
 
 
 if __name__ == "__main__":
