@@ -1,0 +1,15 @@
+{
+  "assumptions_satisfied": true,
+  "block_count": 8,
+  "budget_upper_bound_used": 0.23036727417696934,
+  "dimension": 8,
+  "fano_misclassification_lower_bound": 0.55,
+  "gradient_variation_budget_realized": 0.23036727417673894,
+  "hypotheses": 16,
+  "mu": 1.0,
+  "optimizer_independent_transcript": true,
+  "recomputed_pairwise_kl": 0.5545177444479562,
+  "samples_per_block": 4,
+  "sigma": 1.0,
+  "target_pairwise_kl": 0.5545177444479562
+}

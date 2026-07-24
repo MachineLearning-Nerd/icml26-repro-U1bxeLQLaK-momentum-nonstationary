@@ -1,0 +1,10 @@
+{
+  "passed": false,
+  "recomputed_ratios": {
+    "hb": 0.018306706674367984,
+    "nag": 0.07072934303967725,
+    "sgd": 1.0856428805119511
+  },
+  "recomputed_sgd_best": false,
+  "source": "raw_minibatch_summary.csv only"
+}

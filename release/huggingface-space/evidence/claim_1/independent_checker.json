@@ -1,0 +1,10 @@
+{
+  "all_lifted_operators_stable": true,
+  "noise_floor_slope_recomputed": 0.9868074461261153,
+  "noise_matches_judged_slope_0_987": true,
+  "passed": true,
+  "plain_sgd_has_no_transient_amplification": true,
+  "plain_sgd_transient_growth": 1.0,
+  "transient_matches_judged_slope_2_115": true,
+  "transient_slope_recomputed": 2.1149370788865216
+}

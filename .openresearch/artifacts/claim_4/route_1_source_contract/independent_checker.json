@@ -1,0 +1,6 @@
+{
+  "coupling_ratio_exponent": 1.9999999999999998,
+  "displayed_theorem_horizon_exponent": 2.0000000000000013,
+  "passed": true,
+  "sgd_coupling_present_in_source": true
+}

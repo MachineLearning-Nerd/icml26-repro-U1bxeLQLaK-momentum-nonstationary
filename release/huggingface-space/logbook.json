@@ -1,0 +1,127 @@
+{
+  "schema_version": 1,
+  "title": "Repro - Momentum SGD under Nonstationary Drift",
+  "emoji": "🎯",
+  "space_id": "DineshAI/U1bxeLQLaK",
+  "paper": {
+    "openreview_id": "U1bxeLQLaK",
+    "arxiv_id": "2601.12238"
+  },
+  "tags": [
+    "icml2026-repro",
+    "paper-U1bxeLQLaK"
+  ],
+  "updated_at": "2026-07-24T00:00:00+00:00",
+  "root": {
+    "slug": "current-verification",
+    "title": "Current verification — evaluator evidence gate",
+    "file": "pages/current-verification/page.md",
+    "children": [
+      {
+        "slug": "campaign-claim-1",
+        "title": "Claim 1 — current VERIFIED",
+        "file": "pages/campaign-claim-1/page.md",
+        "children": []
+      },
+      {
+        "slug": "campaign-claim-2",
+        "title": "Claim 2 — current BLOCKED",
+        "file": "pages/campaign-claim-2/page.md",
+        "children": []
+      },
+      {
+        "slug": "campaign-claim-3",
+        "title": "Claim 3 — current VERIFIED existential contract",
+        "file": "pages/campaign-claim-3/page.md",
+        "children": []
+      },
+      {
+        "slug": "campaign-claim-4",
+        "title": "Claim 4 — current FALSIFIED exact wording",
+        "file": "pages/campaign-claim-4/page.md",
+        "children": []
+      },
+      {
+        "slug": "campaign-claim-5",
+        "title": "Claim 5 — current BLOCKED",
+        "file": "pages/campaign-claim-5/page.md",
+        "children": []
+      },
+      {
+        "slug": "campaign-2026-07-23",
+        "title": "Current campaign provenance",
+        "file": "pages/campaign-2026-07-23/page.md",
+        "children": []
+      },
+      {
+        "slug": "evaluator-visibility",
+        "title": "Evaluator-blind visibility review",
+        "file": "pages/evaluator-visibility/page.md",
+        "children": []
+      },
+      {
+        "slug": "historical-rejected-index",
+        "title": "Historical rejected baseline — index",
+        "file": "pages/index.md",
+        "children": [
+          {
+            "slug": "overview",
+            "title": "Historical rejected baseline — Overview",
+            "file": "pages/overview/page.md",
+            "children": []
+          },
+          {
+            "slug": "claim-1",
+            "title": "Historical rejected baseline — Claim 1",
+            "file": "pages/claim-1/page.md",
+            "children": []
+          },
+          {
+            "slug": "claim-2",
+            "title": "Historical rejected baseline — Claim 2",
+            "file": "pages/claim-2/page.md",
+            "children": []
+          },
+          {
+            "slug": "claim-3",
+            "title": "Historical rejected baseline — Claim 3",
+            "file": "pages/claim-3/page.md",
+            "children": []
+          },
+          {
+            "slug": "claim-4",
+            "title": "Historical rejected baseline — Claim 4",
+            "file": "pages/claim-4/page.md",
+            "children": []
+          },
+          {
+            "slug": "claim-5",
+            "title": "Historical rejected baseline — Claim 5",
+            "file": "pages/claim-5/page.md",
+            "children": []
+          },
+          {
+            "slug": "methods",
+            "title": "Historical rejected baseline — Methods",
+            "file": "pages/methods/page.md",
+            "children": []
+          },
+          {
+            "slug": "negative-controls",
+            "title": "Historical rejected baseline — Negative controls",
+            "file": "pages/negative-controls/page.md",
+            "children": []
+          },
+          {
+            "slug": "conclusion",
+            "title": "Historical rejected baseline — Conclusion",
+            "file": "pages/conclusion/page.md",
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "agent_view_tokens": 4096,
+  "revision": "evaluator-visible-candidate"
+}

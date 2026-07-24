@@ -1,0 +1,28 @@
+{
+  "anchors": [
+    "main.tex:613-651",
+    "appendix.tex:3410-3710",
+    "appendix.tex:3714-3765"
+  ],
+  "claim": "In a drift-dominated nonstationary strongly-convex smooth regime, the stability restriction gamma <= c(1-beta)^2/L produces an inertia window and permits vanilla SGD to achieve lower tracking error than HB and NAG.",
+  "domain": {
+    "L": 10.0,
+    "dimension": 100,
+    "drift": "normalized Gaussian random walk, step norm 0.01",
+    "horizon": 5000,
+    "momentum_cap": "mu(1-beta)^2/(4L^2), the stronger theorem cap",
+    "mu": 1.0,
+    "noise": "iid Gaussian gradient noise, std 0.02",
+    "seeds": 20
+  },
+  "logical_scope": "existential drift-heavy regime plus the source response mechanism; not a universal assertion that momentum loses on every problem",
+  "quantifiers": "The source lower-bound construction is existential over a variation-bounded function class; the experiment supplies one full-dimensional stochastic witness at four beta values.",
+  "source": {
+    "arxiv_id": "2601.12238v4",
+    "html_sha256": "2b97b7d91336a16b7bd7800d3f8ed96ebd17a89474fb36e4c6991e378d7a47ec",
+    "pdf_sha256": "415533d734236070ec5180fdcf6fcc9454dc55a20913f219b5d7f1be19776032",
+    "retrieval_date": "2026-07-23",
+    "source_archive_sha256": "89ad9ad897d3f9a0210ceab3e61adb356bf32edaa49621c0234a426aef3b3fa9",
+    "source_url": "https://export.arxiv.org/e-print/2601.12238"
+  }
+}

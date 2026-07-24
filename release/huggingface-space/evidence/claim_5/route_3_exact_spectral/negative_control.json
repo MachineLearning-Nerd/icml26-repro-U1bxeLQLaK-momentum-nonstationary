@@ -1,0 +1,6 @@
+{
+  "expected_rejection": true,
+  "mutation": "replace kappa=1000 endpoint by kappa=10 duplicate",
+  "observed_rejection": true,
+  "passed": true
+}

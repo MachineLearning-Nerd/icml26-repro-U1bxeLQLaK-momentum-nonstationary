@@ -1,0 +1,5 @@
+candidate,route,contradicts_exact_descriptive_claim,rejection_reason
+literal_raw_minibatch_clean_room,route_2_raw_minibatch,False,"The clean-room implementation is a valid disclosed-protocol instance but cannot identify the undisclosed author experiment; the exact claim is about the latter, not all such instances."
+stationary_deterministic_hb_acceleration,negative control,False,Stationarity violates the empirical claim's distribution-shift domain.
+paper_mlp_sgd_absolute_kappa_degradation,source table audit,False,"The source says comparatively robust; HB and NAG degrade by still larger endpoint factors, so absolute SGD degradation is not a logical contradiction."
+missing_reported_drift_magnitude_sweep,source completeness audit,False,Missing evidence weakens verifiability but is not a counterexample.

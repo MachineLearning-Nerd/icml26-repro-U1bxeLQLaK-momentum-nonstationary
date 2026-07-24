@@ -1,0 +1,25 @@
+{
+  "command": "uv run --project campaign python campaign/repro/src/published_claim_verifier.py --claim claim_4 --evidence-root evidence --inject-failure",
+  "exit_code": 1,
+  "expected_nonzero": true,
+  "stdout": {
+    "checks": {
+      "coefficient_ratio_slope": 0.0,
+      "coefficient_ratio_slope_is_two": false,
+      "displayed_horizon_slope": 2.0000000000000004,
+      "displayed_horizon_slope_is_two_not_one": true,
+      "exact_contract_is_falsified": true,
+      "input_sha256": {
+        "claim_contract.json": "cd573272f001b2cfc33917c0ea6e70bb88f946f16d34482b1dcf5e02abed29df",
+        "coefficient_audit.csv": "3540023680f7261622d2eef30ddaebb90cd99c655d251f68d7b1d1ca7a1e05e7",
+        "horizon_audit.csv": "51656b81b8b74c534adaedba88d3f0f2d877ff58e2da7b902ccdb440555a4619"
+      },
+      "passed": false,
+      "sgd_reference_coefficient_is_beta_neutral": true
+    },
+    "claim": "claim_4",
+    "failure_injected": true,
+    "passed": false,
+    "scientific_verdict": "FALSIFIED"
+  }
+}

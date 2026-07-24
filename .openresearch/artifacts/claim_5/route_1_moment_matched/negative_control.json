@@ -1,0 +1,9 @@
+{
+  "control": "stationary deterministic scalar quadratic",
+  "gamma_within_claimed_cap": true,
+  "hb_accelerates": true,
+  "hb_squared_error_after_20": 0.031425473031889764,
+  "mutated_kappa_labels_rejected": false,
+  "passed": false,
+  "sgd_squared_error_after_20": 0.19536615155532025
+}

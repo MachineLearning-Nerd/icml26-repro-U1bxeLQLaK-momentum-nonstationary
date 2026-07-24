@@ -1,0 +1,9 @@
+{
+  "mutations": [
+    "replace initialization exponent 2 by 1",
+    "replace noise-floor exponent 1 by 2"
+  ],
+  "passed": true,
+  "wrong_initialization_exponent_rejected": true,
+  "wrong_noise_exponent_rejected": true
+}

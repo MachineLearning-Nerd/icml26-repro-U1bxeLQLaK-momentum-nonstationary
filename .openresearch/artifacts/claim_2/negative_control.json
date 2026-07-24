@@ -1,0 +1,7 @@
+{
+  "control": "stationary deterministic quadratic",
+  "gamma_within_momentum_cap": true,
+  "hb_accelerates_control": true,
+  "stationary_deterministic_hb_squared_error": 0.031425473031889764,
+  "stationary_deterministic_sgd_squared_error": 0.19536615155532025
+}

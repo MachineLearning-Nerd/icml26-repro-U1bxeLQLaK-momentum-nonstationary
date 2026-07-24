@@ -1,0 +1,7 @@
+{
+  "all_candidates_state_domain_or_quantifier_result": true,
+  "candidate_count": 4,
+  "passed": true,
+  "valid_exact_counterexample_count": 0,
+  "valid_falsification_established": false
+}

@@ -1,0 +1,31 @@
+{
+  "disclosed_assumptions": [
+    "normalized Gaussian random-walk minimizer drift",
+    "d=50 for linear/logistic and d=100 for quadratics",
+    "20 runs and T=5000",
+    "batch size 256",
+    "linear covariance spectrum log-spaced from 1 to kappa",
+    "kappa endpoints 10 and 1000",
+    "beta=0.9 and table-specific fixed gamma"
+  ],
+  "domain": "the four Appendix-F task implementations and their reported settings",
+  "logical_type": "descriptive assertion about the reported finite experiments",
+  "quantifiers": "No universal quantifier over every admissible objective, seed, covariance orientation, or implementation is stated.",
+  "source": {
+    "arxiv_id": "2601.12238v4",
+    "html_sha256": "2b97b7d91336a16b7bd7800d3f8ed96ebd17a89474fb36e4c6991e378d7a47ec",
+    "pdf_sha256": "415533d734236070ec5180fdcf6fcc9454dc55a20913f219b5d7f1be19776032",
+    "retrieval_date": "2026-07-23",
+    "source_archive_sha256": "89ad9ad897d3f9a0210ceab3e61adb356bf32edaa49621c0234a426aef3b3fa9",
+    "source_url": "https://export.arxiv.org/e-print/2601.12238"
+  },
+  "statement": "The numerical experiments reported in Section 4 on quadratics, linear/logistic regression, and MLPs confirm that increasing drift, beta, or kappa worsens HB/NAG tracking while SGD is comparatively robust.",
+  "undisclosed_material_details": [
+    "author code",
+    "random seeds and stream sharing",
+    "covariance eigenvectors",
+    "averaging window behind the endpoint table",
+    "held-out datasets",
+    "MLP drift and optimizer implementation details beyond prose"
+  ]
+}

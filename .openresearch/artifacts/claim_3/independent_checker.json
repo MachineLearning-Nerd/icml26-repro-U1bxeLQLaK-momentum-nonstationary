@@ -1,0 +1,6 @@
+{
+  "all_trial_steps_within_declared_caps": true,
+  "passed": true,
+  "slow_mode_half_life_exponent_vs_kappa_over_gap": 0.9998450157665858,
+  "two_sem_separation_at_every_beta": true
+}

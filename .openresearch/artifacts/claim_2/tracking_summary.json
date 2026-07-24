@@ -1,0 +1,11 @@
+{
+  "matched_beta_scenarios": 4,
+  "negative_control": {
+    "gamma_within_momentum_cap": true,
+    "hb_accelerates_control": true,
+    "stationary_deterministic_hb_squared_error": 0.031425473031889764,
+    "stationary_deterministic_sgd_squared_error": 0.19536615155532025
+  },
+  "passed": true,
+  "sgd_beats_hb_and_nag_for_every_beta": true
+}

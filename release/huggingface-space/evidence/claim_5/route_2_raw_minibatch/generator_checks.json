@@ -1,0 +1,12 @@
+{
+  "all_120_trials_finite": true,
+  "endpoint_kappa_ratios": {
+    "hb": 0.018306706674367984,
+    "nag": 0.07072934303967725,
+    "sgd": 1.0856428805119511
+  },
+  "hb_worsens_with_kappa": false,
+  "nag_worsens_with_kappa": false,
+  "passed": false,
+  "sgd_best_at_kappa_1000": false
+}

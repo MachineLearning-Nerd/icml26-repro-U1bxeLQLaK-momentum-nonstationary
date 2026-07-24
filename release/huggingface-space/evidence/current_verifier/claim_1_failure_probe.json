@@ -1,0 +1,24 @@
+{
+  "command": "uv run --project campaign python campaign/repro/src/published_claim_verifier.py --claim claim_1 --evidence-root evidence --inject-failure",
+  "exit_code": 1,
+  "expected_nonzero": true,
+  "stdout": {
+    "checks": {
+      "all_lifted_operators_stable": true,
+      "input_sha256": {
+        "noise_floor_results.json": "a95afd5d720d8c57ec947d0316f959ff6d1f87a0db8566493f2cf6dc0634fee1",
+        "transient_results.json": "5d60117a0d90017064943481f19a0f8b81ba2b67b4e52e16a5f36387e35d8955"
+      },
+      "noise_floor_slope": 0.986807446126115,
+      "noise_slope_in_interval_0.9_1.1": true,
+      "passed": false,
+      "plain_sgd_transient_growth_is_one": true,
+      "transient_slope": 1.0,
+      "transient_slope_in_interval_1.9_2.3": false
+    },
+    "claim": "claim_1",
+    "failure_injected": true,
+    "passed": false,
+    "scientific_verdict": "VERIFIED"
+  }
+}

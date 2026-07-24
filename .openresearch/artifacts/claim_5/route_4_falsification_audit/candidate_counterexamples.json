@@ -1,0 +1,39 @@
+[
+  {
+    "candidate": "literal_raw_minibatch_clean_room",
+    "contradicts_exact_descriptive_claim": false,
+    "contradicts_universalized_claim": true,
+    "opposite_kappa_direction_for_hb": true,
+    "opposite_kappa_direction_for_nag": true,
+    "rejection_reason": "The clean-room implementation is a valid disclosed-protocol instance but cannot identify the undisclosed author experiment; the exact claim is about the latter, not all such instances.",
+    "route": "route_2_raw_minibatch",
+    "satisfies_every_disclosed_linear_protocol_item": true
+  },
+  {
+    "candidate": "stationary_deterministic_hb_acceleration",
+    "contradicts_exact_descriptive_claim": false,
+    "contradicts_universalized_claim": true,
+    "rejection_reason": "Stationarity violates the empirical claim's distribution-shift domain.",
+    "route": "negative control",
+    "satisfies_nonstationary_section4_domain": false,
+    "satisfies_strong_convexity_and_stability": true
+  },
+  {
+    "candidate": "paper_mlp_sgd_absolute_kappa_degradation",
+    "contradicts_absolute_sgd_robustness": true,
+    "contradicts_exact_descriptive_claim": false,
+    "paper_kappa1000_sgd_prediction_tracking": 1064.5,
+    "paper_kappa10_sgd_prediction_tracking": 28.31,
+    "rejection_reason": "The source says comparatively robust; HB and NAG degrade by still larger endpoint factors, so absolute SGD degradation is not a logical contradiction.",
+    "route": "source table audit",
+    "sgd_endpoint_ratio": 37.60155422112328
+  },
+  {
+    "candidate": "missing_reported_drift_magnitude_sweep",
+    "contradicts_exact_descriptive_claim": false,
+    "rejection_reason": "Missing evidence weakens verifiability but is not a counterexample.",
+    "route": "source completeness audit",
+    "source_reports_fixed_default_drift": true,
+    "source_reports_machine_readable_drift_sweep": false
+  }
+]

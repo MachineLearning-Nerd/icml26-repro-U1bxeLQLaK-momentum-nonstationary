@@ -1,0 +1,49 @@
+{
+  "anchors": [
+    "main.tex:658-762",
+    "appendix.tex:3714-4040",
+    "Table tab:summary_5000_tasks_with_settings"
+  ],
+  "claim": "Section 4's numerical evidence shows that greater drift, beta, or condition number worsens HB/NAG tracking while SGD is comparatively robust across quadratics, linear/logistic regression, and MLPs.",
+  "domain": {
+    "batch_size": 256,
+    "beta": [
+      0,
+      0.5,
+      0.9,
+      0.95,
+      0.98
+    ],
+    "dimension": 50,
+    "drift": [
+      0,
+      0.003,
+      0.01,
+      0.03,
+      0.1
+    ],
+    "horizon": 5000,
+    "kappa": [
+      10,
+      30,
+      100,
+      300,
+      1000
+    ],
+    "methods": [
+      "sgd",
+      "hb",
+      "nag"
+    ],
+    "seeds": 20
+  },
+  "machine_scope": "new direct tests of the three judge-identified missing factors on source-scale streaming linear regression; inherited model-class evidence remains separate and is not upgraded by this contract",
+  "source": {
+    "arxiv_id": "2601.12238v4",
+    "html_sha256": "2b97b7d91336a16b7bd7800d3f8ed96ebd17a89474fb36e4c6991e378d7a47ec",
+    "pdf_sha256": "415533d734236070ec5180fdcf6fcc9454dc55a20913f219b5d7f1be19776032",
+    "retrieval_date": "2026-07-23",
+    "source_archive_sha256": "89ad9ad897d3f9a0210ceab3e61adb356bf32edaa49621c0234a426aef3b3fa9",
+    "source_url": "https://export.arxiv.org/e-print/2601.12238"
+  }
+}

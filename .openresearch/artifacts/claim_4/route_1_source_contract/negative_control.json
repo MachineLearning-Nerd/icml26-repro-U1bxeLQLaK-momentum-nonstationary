@@ -1,0 +1,12 @@
+{
+  "environment": {
+    "lockfile": "uv.lock",
+    "manager": "uv"
+  },
+  "expected_rejection": true,
+  "mutations": [
+    "replace the momentum/SGD coefficient exponent 2 by 1",
+    "erase the vanilla-SGD drift-noise term"
+  ],
+  "observed_rejection": true
+}

@@ -1,0 +1,14 @@
+{
+  "dimension": 8,
+  "empirical_ml_error": 0.85482,
+  "fano_error_lower_bound": 0.55,
+  "hypotheses": 16,
+  "max_pairwise_kl": 0.5545177444479562,
+  "mu": 1.0,
+  "passed": true,
+  "policy_query_residuals_identical": true,
+  "samples_per_hypothesis": 4,
+  "sigma": 1.0,
+  "standard_error": 0.0015754540145621514,
+  "trials": 50000
+}

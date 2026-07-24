@@ -1,0 +1,35 @@
+{
+  "candidate_manifest_sha256": "3cac253a30b90e3c765ec2cec95f45dd9fbadf5b1b0f114e81cce6089859c59d",
+  "logbook_validation": {
+    "page_count": 18,
+    "unique_slug_count": 18
+  },
+  "machine_file_validation": {
+    "validated_csv_files": 19,
+    "validated_json_files": 73
+  },
+  "passed": true,
+  "secret_scan": {
+    "finding_count": 0,
+    "findings": [],
+    "passed": true,
+    "scanned_text_file_count": 176
+  },
+  "subset_check": {
+    "all_old_page_files_content_identical": true,
+    "candidate_file_count": 199,
+    "content_identical_old_files": 23,
+    "intentionally_modified_old_files": [
+      "README.md",
+      "logbook.json"
+    ],
+    "judged_revision": "9db6b4452399d8ef19e3f8ca479a627060819fb3",
+    "missing_old_paths": [],
+    "old_file_count": 25,
+    "old_file_set_is_subset": true,
+    "passed": true,
+    "space_id": "DineshAI/U1bxeLQLaK"
+  },
+  "upload_file_count": 176,
+  "upload_manifest_sha256": "205583f81685131a2a90c6865b27a4052ee8b78a874efe84ac74a83d4f3747c5"
+}

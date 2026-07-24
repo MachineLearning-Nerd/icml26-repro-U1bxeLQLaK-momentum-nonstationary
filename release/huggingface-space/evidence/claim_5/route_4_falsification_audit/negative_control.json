@@ -1,0 +1,7 @@
+{
+  "checker_sensitive": true,
+  "mutation": "replace the finite descriptive claim by a universal assertion over every implementation satisfying the disclosed linear protocol",
+  "passed": true,
+  "raw_route_would_falsify_mutated_universal_claim": true,
+  "stationary_candidate_rejected_for_domain_violation": true
+}
