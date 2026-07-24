@@ -1,5 +1,5 @@
 {
-  "candidate_manifest_sha256": "c28a77d0a5d2c8443a567aa8b760eeec06e2d95d92232c6e72dc9fe32cb7fa33",
+  "candidate_manifest_sha256": "3cac253a30b90e3c765ec2cec95f45dd9fbadf5b1b0f114e81cce6089859c59d",
   "logbook_validation": {
     "page_count": 18,
     "unique_slug_count": 18
@@ -31,5 +31,5 @@
     "space_id": "DineshAI/U1bxeLQLaK"
   },
   "upload_file_count": 176,
-  "upload_manifest_sha256": "b9c01974311e4b0d37415f3a389c73b4dd93781f034a66697f5d5d2fae469f1d"
+  "upload_manifest_sha256": "205583f81685131a2a90c6865b27a4052ee8b78a874efe84ac74a83d4f3747c5"
 }
