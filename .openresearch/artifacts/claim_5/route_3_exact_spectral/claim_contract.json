@@ -1,0 +1,29 @@
+{
+  "claim": "The exact stationary covariance of the source-normalized linear tracking dynamics worsens for HB and NAG from kappa 10 to 1000 and remains lower for SGD.",
+  "domain": {
+    "beta": 0.9,
+    "dimension": 50,
+    "drift_increment_covariance": "0.0001/50 I",
+    "kappa_and_gamma": [
+      [
+        10,
+        0.1
+      ],
+      [
+        1000,
+        0.001
+      ]
+    ],
+    "label_noise_gradient_covariance": "sigma^2 Sigma / batch_size",
+    "spectrum": "log-spaced from 1 to kappa"
+  },
+  "interpretation": "population-risk linear dynamics with exact second-order drift and label-noise covariance; no Monte Carlo or Gaussian CLT sampling",
+  "source": {
+    "arxiv_id": "2601.12238v4",
+    "html_sha256": "2b97b7d91336a16b7bd7800d3f8ed96ebd17a89474fb36e4c6991e378d7a47ec",
+    "pdf_sha256": "415533d734236070ec5180fdcf6fcc9454dc55a20913f219b5d7f1be19776032",
+    "retrieval_date": "2026-07-23",
+    "source_archive_sha256": "89ad9ad897d3f9a0210ceab3e61adb356bf32edaa49621c0234a426aef3b3fa9",
+    "source_url": "https://export.arxiv.org/e-print/2601.12238"
+  }
+}

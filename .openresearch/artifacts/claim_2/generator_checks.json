@@ -1,0 +1,11 @@
+{
+  "expected_inertia_beta_exponent": 2.0,
+  "expected_statistical_beta_exponent": 0.6666666666666666,
+  "fano_certificate_valid": true,
+  "high_variation_inertia_dominates_all_beta": true,
+  "inertia_beta_exponent": 2.000000000000001,
+  "low_variation_statistical_dominates_all_beta": true,
+  "passed": true,
+  "response_horizon_beta_exponent": 1.000415432367956,
+  "statistical_beta_exponent": 0.6666666666666667
+}

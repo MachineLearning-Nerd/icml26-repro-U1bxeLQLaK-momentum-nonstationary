@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "title": "Repro - Momentum SGD under Nonstationary Drift",
+  "emoji": "\ud83c\udfaf",
+  "space_id": "DineshAI/U1bxeLQLaK",
+  "paper": {
+    "openreview_id": "U1bxeLQLaK",
+    "arxiv_id": "2601.12238"
+  },
+  "tags": [
+    "icml2026-repro",
+    "paper-U1bxeLQLaK"
+  ],
+  "updated_at": "2026-07-23T23:30:00+00:00",
+  "root": {
+    "slug": "index",
+    "title": "Repro - Momentum SGD under Nonstationary Drift",
+    "file": "pages/index.md",
+    "children": [
+      {
+        "slug": "campaign-2026-07-23",
+        "title": "2026-07-23 rigorous campaign",
+        "file": "pages/campaign-2026-07-23/page.md",
+        "children": [
+          {
+            "slug": "campaign-claim-2",
+            "title": "Campaign Claim 2",
+            "file": "pages/campaign-claim-2/page.md",
+            "children": []
+          },
+          {
+            "slug": "campaign-claim-3",
+            "title": "Campaign Claim 3",
+            "file": "pages/campaign-claim-3/page.md",
+            "children": []
+          },
+          {
+            "slug": "campaign-claim-4",
+            "title": "Campaign Claim 4",
+            "file": "pages/campaign-claim-4/page.md",
+            "children": []
+          },
+          {
+            "slug": "campaign-claim-5",
+            "title": "Campaign Claim 5",
+            "file": "pages/campaign-claim-5/page.md",
+            "children": []
+          }
+        ]
+      },
+      {
+        "slug": "overview",
+        "title": "Overview",
+        "file": "pages/overview/page.md",
+        "children": []
+      },
+      {
+        "slug": "claim-1",
+        "title": "Claim 1",
+        "file": "pages/claim-1/page.md",
+        "children": []
+      },
+      {
+        "slug": "claim-2",
+        "title": "Claim 2",
+        "file": "pages/claim-2/page.md",
+        "children": []
+      },
+      {
+        "slug": "claim-3",
+        "title": "Claim 3",
+        "file": "pages/claim-3/page.md",
+        "children": []
+      },
+      {
+        "slug": "claim-4",
+        "title": "Claim 4",
+        "file": "pages/claim-4/page.md",
+        "children": []
+      },
+      {
+        "slug": "claim-5",
+        "title": "Claim 5",
+        "file": "pages/claim-5/page.md",
+        "children": []
+      },
+      {
+        "slug": "methods",
+        "title": "Methods",
+        "file": "pages/methods/page.md",
+        "children": []
+      },
+      {
+        "slug": "negative-controls",
+        "title": "Negative controls",
+        "file": "pages/negative-controls/page.md",
+        "children": []
+      },
+      {
+        "slug": "conclusion",
+        "title": "Conclusion",
+        "file": "pages/conclusion/page.md",
+        "children": []
+      }
+    ]
+  },
+  "agent_view_tokens": 1020,
+  "revision": "1784621484515953012"
+}

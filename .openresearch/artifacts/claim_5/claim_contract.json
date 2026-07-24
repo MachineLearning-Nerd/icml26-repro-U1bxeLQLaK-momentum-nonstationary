@@ -1,0 +1,18 @@
+{
+  "claim": "Section 4 reports systematic tracking degradation with drift, momentum, and condition number across four model classes.",
+  "routes": [
+    "route_1_moment_matched",
+    "route_2_raw_minibatch",
+    "route_3_exact_spectral",
+    "route_4_falsification_audit"
+  ],
+  "source": {
+    "arxiv_id": "2601.12238v4",
+    "html_sha256": "2b97b7d91336a16b7bd7800d3f8ed96ebd17a89474fb36e4c6991e378d7a47ec",
+    "pdf_sha256": "415533d734236070ec5180fdcf6fcc9454dc55a20913f219b5d7f1be19776032",
+    "retrieval_date": "2026-07-23",
+    "source_archive_sha256": "89ad9ad897d3f9a0210ceab3e61adb356bf32edaa49621c0234a426aef3b3fa9",
+    "source_url": "https://export.arxiv.org/e-print/2601.12238"
+  },
+  "verdict_rule": "VERIFIED if a faithful verification route resolves the criticism; FALSIFIED only if route 4 establishes an exact counterexample; otherwise BLOCKED after all four routes."
+}

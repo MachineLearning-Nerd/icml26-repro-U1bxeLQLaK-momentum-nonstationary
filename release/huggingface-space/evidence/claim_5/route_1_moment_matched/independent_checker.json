@@ -1,0 +1,19 @@
+{
+  "passed": false,
+  "recomputed_beta_effects": {
+    "hb": 9.177324323714712e+56,
+    "nag": 3.9271368736923975,
+    "sgd": 1.0
+  },
+  "recomputed_drift_effects": {
+    "hb": 1.9107606838276423,
+    "nag": 1.594450083936322,
+    "sgd": 3.0732631559489376
+  },
+  "recomputed_high_kappa_order": false,
+  "recomputed_kappa_effects": {
+    "hb": 0.017890908728570545,
+    "nag": 0.06930536441599189,
+    "sgd": 1.1584881836534007
+  }
+}

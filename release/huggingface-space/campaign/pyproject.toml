@@ -1,0 +1,15 @@
+[project]
+name = "momentum-nonstationary-reproduction"
+version = "0.1.0"
+description = "Claim-by-claim reproduction of arXiv:2601.12238"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "marimo>=0.14,<1",
+    "matplotlib>=3.9,<4",
+    "numpy>=2,<3",
+    "pytest>=8,<10",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["repro/src"]
+testpaths = ["repro/tests"]

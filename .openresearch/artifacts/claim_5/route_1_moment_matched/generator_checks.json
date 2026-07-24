@@ -1,0 +1,22 @@
+{
+  "all_methods_worsen_with_drift": true,
+  "beta_endpoint_error_ratios": {
+    "hb": 9.177324323714712e+56,
+    "nag": 3.9271368736923975,
+    "sgd": 1.0
+  },
+  "drift_endpoint_error_ratios": {
+    "hb": 1.9107606838276423,
+    "nag": 1.594450083936322,
+    "sgd": 3.0732631559489376
+  },
+  "hb_and_nag_worsen_with_beta": true,
+  "hb_and_nag_worsen_with_kappa": false,
+  "kappa_endpoint_error_ratios": {
+    "hb": 0.017890908728570545,
+    "nag": 0.06930536441599189,
+    "sgd": 1.1584881836534007
+  },
+  "passed": false,
+  "sgd_best_at_kappa_1000": false
+}

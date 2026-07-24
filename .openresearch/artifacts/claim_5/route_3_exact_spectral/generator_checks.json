@@ -1,0 +1,13 @@
+{
+  "all_modes_stable": true,
+  "endpoint_kappa_ratios": {
+    "hb": 0.03019033384451959,
+    "nag": 0.08749635807802307,
+    "sgd": 1.184820968149871
+  },
+  "hb_worsens_with_kappa": false,
+  "max_lyapunov_residual": 2.710505431213761e-19,
+  "nag_worsens_with_kappa": false,
+  "passed": false,
+  "sgd_best_at_kappa_1000": false
+}

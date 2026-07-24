@@ -1,0 +1,6 @@
+{
+  "all_mode_covariances_nonnegative": true,
+  "checker": "direct discrete-Lyapunov residual",
+  "max_abs_residual": 2.710505431213761e-19,
+  "passed": true
+}

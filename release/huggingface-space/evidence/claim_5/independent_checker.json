@@ -1,0 +1,8 @@
+{
+  "aggregate_verdict": "BLOCKED",
+  "passed": true,
+  "route_1_verdict": "BLOCKED",
+  "route_2_verdict": "BLOCKED",
+  "route_3_verdict": "BLOCKED",
+  "route_4_verdict": "BLOCKED"
+}

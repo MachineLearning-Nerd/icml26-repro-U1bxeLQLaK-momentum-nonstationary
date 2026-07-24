@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "route_1_source_contract": {
+    "coupling_ratio_exponent": 1.9999999999999998,
+    "displayed_theorem_horizon_exponent": 2.0000000000000013,
+    "passed": true,
+    "sgd_coupling_present_in_source": true
+  },
+  "route_2_pathwise_coefficient": {
+    "momentum_coupling_exponent": 2.000000065208412,
+    "passed": true,
+    "sgd_control_exponent": -3.756453788628106e-17
+  }
+}

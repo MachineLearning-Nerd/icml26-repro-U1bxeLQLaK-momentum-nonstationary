@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "route_1_source_contract": {
+    "expected_rejection": true,
+    "mutations": [
+      "replace the momentum/SGD coefficient exponent 2 by 1",
+      "erase the vanilla-SGD drift-noise term"
+    ],
+    "observed_rejection": true
+  },
+  "route_2_pathwise_coefficient": {
+    "control": "zero drift",
+    "cross_term_exactly_zero": true
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "minimum_momentum_coverage": 0.95075,
+  "momentum_coupling_squared_quantile_beta_exponent": 2.000000065208412,
+  "passed": true,
+  "sgd_control_beta_exponent": -3.756453788628106e-17,
+  "sgd_coverage": 0.950775,
+  "velocity_memory_horizon_beta_exponent": 1.0909094447006602,
+  "zero_drift_cross_term_exactly_zero": true
+}

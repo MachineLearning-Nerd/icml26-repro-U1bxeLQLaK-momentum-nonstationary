@@ -1,0 +1,11 @@
+{
+  "displayed_horizon_matches_claimed_exponent_one": false,
+  "literal_absence_assertion_is_false": true,
+  "momentum_to_sgd_coupling_ratio_exponent": 1.9999999999999998,
+  "passed": true,
+  "ratio_matches_two": true,
+  "sgd_displayed_bound_has_drift_noise_coupling": true,
+  "source_contract_contradicted": true,
+  "theorem36_displayed_horizon_exponent_after_stability_substitution": 2.0000000000000013,
+  "velocity_memory_horizon_exponent": 1.0909094447006602
+}

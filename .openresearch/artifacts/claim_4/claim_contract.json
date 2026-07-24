@@ -1,0 +1,22 @@
+{
+  "anchors": [
+    "main.tex:524-557",
+    "appendix.tex:1629-2368"
+  ],
+  "claim": "Theorem 3.6 has a momentum drift-noise coefficient proportional to (1-beta)^-2 and an inertia horizon of order (1-beta)^-1, with both features absent from Theorem 3.5 for vanilla SGD.",
+  "logical_form": "conjunction",
+  "reason": "Theorem 3.5 contains a drift-noise term, and Theorem 3.6's displayed forgetting horizon scales as (1-beta)^-2 after its own stability substitution. The narrower momentum-specific coefficient interpretation is separately verified.",
+  "routes": {
+    "route_1_source_contract": "FALSIFIED",
+    "route_2_pathwise_coefficient": "VERIFIED"
+  },
+  "source": {
+    "arxiv_id": "2601.12238v4",
+    "html_sha256": "2b97b7d91336a16b7bd7800d3f8ed96ebd17a89474fb36e4c6991e378d7a47ec",
+    "pdf_sha256": "415533d734236070ec5180fdcf6fcc9454dc55a20913f219b5d7f1be19776032",
+    "retrieval_date": "2026-07-23",
+    "source_archive_sha256": "89ad9ad897d3f9a0210ceab3e61adb356bf32edaa49621c0234a426aef3b3fa9",
+    "source_url": "https://export.arxiv.org/e-print/2601.12238"
+  },
+  "verdict": "FALSIFIED"
+}
