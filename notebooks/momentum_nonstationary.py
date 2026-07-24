@@ -128,7 +128,7 @@ def _(mo):
     | Claim | Verdict | Key evidence |
     |---|---:|---|
     | 1: Theorem 3.3 beta exponents | **VERIFIED** | preserved transient slope `2.115`; noise slope `0.987` |
-    | 2: minimax statistical + inertia terms | **VERIFIED** | exact exponents `2/3` and `2`; finite Fano route |
+    | 2: minimax statistical + inertia terms | **BLOCKED** | scoped exponents/Fano pass; universal policy quantifier remains open |
     | 3: stable SGD wins in a drift-heavy regime | **VERIFIED** | full-dimensional experiment shown above |
     | 4: imported high-probability conjunction | **FALSIFIED** | SGD coupling is present; displayed horizon exponent is `2`, not `1` |
     | 5: broad empirical condition-number claim | **BLOCKED** | three routes disagree, fourth route finds no assumption-complete counterexample |

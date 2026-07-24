@@ -1,0 +1,26 @@
+[
+  {
+    "candidate": "nesterov_proof_omission",
+    "contradicts_exact_theorem": false,
+    "rejection_reason": "Appendix E.6 proves only Heavy-Ball and says an analogous Nesterov analysis can be carried out. A proof gap is not a counterexample.",
+    "satisfies_every_assumption": false
+  },
+  {
+    "candidate": "q_infinity_literal_substitution",
+    "contradicts_exact_theorem": false,
+    "rejection_reason": "The displayed q=\u221e powers require a limiting interpretation; notation ambiguity is not an assumption-satisfying counterexample.",
+    "satisfies_every_assumption": false
+  },
+  {
+    "candidate": "finite_fano_gaussian_specialization",
+    "contradicts_exact_theorem": false,
+    "rejection_reason": "The finite p=\u221e, q=1 Gaussian family corroborates the statistical obstruction but cannot contradict or prove the full all-p,q theorem.",
+    "satisfies_every_assumption": true
+  },
+  {
+    "candidate": "full_dimensional_tracking_witness",
+    "contradicts_exact_theorem": false,
+    "rejection_reason": "One admissible d=100 witness corroborates inertia but cannot contradict a minimax lower bound over the complete class.",
+    "satisfies_every_assumption": true
+  }
+]

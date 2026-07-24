@@ -8,7 +8,7 @@ machine-checkable evidence. It does **not** claim a new judge score.
 | Claim | Previous points | New evidence verdict | What changed |
 |---|---:|---:|---|
 | 1 | 2/2 | **VERIFIED** | Existing full-credit evidence is preserved and rerun |
-| 2 | 0/2 | **VERIFIED** | Exact minimax decomposition, finite Fano certificate, and independent pathwise route |
+| 2 | 0/2 | **BLOCKED** | Three scoped routes pass, but universal theorem quantifiers remain open after mandatory falsification audit |
 | 3 | 1/2 | **VERIFIED** | Replaces the 1D proxy with `d=100`, 20 seeds, 5,000 steps |
 | 4 | 0/2 | **FALSIFIED** as imported | Exact source audit plus separately verified narrower coefficient interpretation |
 | 5 | 0/2 | **BLOCKED** | Three verification routes plus mandatory falsification audit |
@@ -35,8 +35,18 @@ or Hugging Face compute was used.
   `2b97b7d91336a16b7bd7800d3f8ed96ebd17a89474fb36e4c6991e378d7a47ec`
 - winning scientific Git SHA:
   `61faf82dbc11f46c01b156f8b60ef68bc70d5450`
+- current evaluator-visible verifier commit:
+  `a56ee4ac2bb961ee1459245e3a0a3d91b9c73560`
+
+## Current verifier
+
+The standalone
+[published verifier](../../campaign/repro/src/published_claim_verifier.py)
+reads only shipped evidence. Its normal run exits `0` for each internally
+consistent verdict, including BLOCKED verdicts, while a claim-specific mutated
+input exits `1`. The [current canonical page](#/current-verification) links all
+normal and failure-probe outputs.
 
 The source archive contains no executable author experiment repository.
 Missing implementation details are recorded as limitations rather than guessed
 into a pass.
-

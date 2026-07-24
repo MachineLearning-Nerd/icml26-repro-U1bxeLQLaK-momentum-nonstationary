@@ -1,25 +1,26 @@
 {
-  "candidate_manifest_sha256": "ab999fbe3cd0f9898454bc87ec3cbf003e76351407d05ad0a5185aa6dd2a1a96",
+  "candidate_manifest_sha256": "c28a77d0a5d2c8443a567aa8b760eeec06e2d95d92232c6e72dc9fe32cb7fa33",
   "logbook_validation": {
-    "page_count": 16,
-    "unique_slug_count": 16
+    "page_count": 18,
+    "unique_slug_count": 18
   },
   "machine_file_validation": {
     "validated_csv_files": 19,
-    "validated_json_files": 58
+    "validated_json_files": 73
   },
   "passed": true,
   "secret_scan": {
     "finding_count": 0,
     "findings": [],
     "passed": true,
-    "scanned_text_file_count": 150
+    "scanned_text_file_count": 176
   },
   "subset_check": {
     "all_old_page_files_content_identical": true,
-    "candidate_file_count": 174,
-    "content_identical_old_files": 24,
+    "candidate_file_count": 199,
+    "content_identical_old_files": 23,
     "intentionally_modified_old_files": [
+      "README.md",
       "logbook.json"
     ],
     "judged_revision": "9db6b4452399d8ef19e3f8ca479a627060819fb3",
@@ -29,6 +30,6 @@
     "passed": true,
     "space_id": "DineshAI/U1bxeLQLaK"
   },
-  "upload_file_count": 150,
-  "upload_manifest_sha256": "c17ee07730499a915ddaca5a852bb6861d736a51a03f8ca4769afeba1f89b020"
+  "upload_file_count": 176,
+  "upload_manifest_sha256": "b9c01974311e4b0d37415f3a389c73b4dd93781f034a66697f5d5d2fae469f1d"
 }

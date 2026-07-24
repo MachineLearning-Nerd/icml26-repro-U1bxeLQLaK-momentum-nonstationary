@@ -10,6 +10,12 @@
     "d=100, 20-seed, 5000-step stability tracking",
     "stationary acceleration negative control"
   ],
+  "routes": {
+    "route_1_symbolic_specialization": "VERIFIED_SCOPED",
+    "route_2_finite_fano": "VERIFIED_SCOPED",
+    "route_3_full_dimensional_pathwise": "VERIFIED_SCOPED",
+    "route_4_falsification_audit": "BLOCKED"
+  },
   "source": {
     "arxiv_id": "2601.12238v4",
     "html_sha256": "2b97b7d91336a16b7bd7800d3f8ed96ebd17a89474fb36e4c6991e378d7a47ec",
@@ -18,5 +24,7 @@
     "source_archive_sha256": "89ad9ad897d3f9a0210ceab3e61adb356bf32edaa49621c0234a426aef3b3fa9",
     "source_url": "https://export.arxiv.org/e-print/2601.12238"
   },
-  "specialization": "p=infinity, q=1; Gaussian gradient oracle"
+  "specialization": "p=infinity, q=1; Gaussian gradient oracle",
+  "universal_calibration": "The p=infinity,q=1 Fano certificate and finite tracking routes are scoped corroboration. They do not verify the theorem for all p,q and every policy in Pi_beta.",
+  "verdict": "BLOCKED"
 }

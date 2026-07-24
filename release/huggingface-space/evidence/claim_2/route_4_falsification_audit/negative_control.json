@@ -1,0 +1,6 @@
+{
+  "control": "treat a missing proof as a counterexample",
+  "expected_rejection": true,
+  "observed_rejection": true,
+  "passed": true
+}

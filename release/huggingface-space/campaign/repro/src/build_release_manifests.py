@@ -34,6 +34,7 @@ SECRET_PATTERNS = {
     "aws_access_key": re.compile(r"\bAKIA[A-Z0-9]{16}\b"),
     "private_key": re.compile(r"-----BEGIN [A-Z ]*PRIVATE KEY-----"),
 }
+ALLOWED_MODIFIED_JUDGED_FILES = ["README.md", "logbook.json"]
 
 
 def _digest(path: Path) -> str:
@@ -95,6 +96,20 @@ def _validate_logbook() -> dict[str, int]:
             visit(child)
 
     visit(payload["root"])
+    if payload["root"]["slug"] != "current-verification":
+        raise SystemExit("current verification is not the canonical root")
+    historical_titles = [
+        str(child["title"]).lower()
+        for child in payload["root"].get("children", [])
+    ]
+    if not any(
+        "historical rejected baseline" in title
+        for title in historical_titles
+    ):
+        raise SystemExit("historical rejected baseline is not labeled")
+    readme = (CANDIDATE / "README.md").read_text()
+    if "#/current-verification" not in readme:
+        raise SystemExit("README does not link the current verification")
     return {"page_count": pages, "unique_slug_count": len(slugs)}
 
 
@@ -148,9 +163,10 @@ def main() -> None:
     )
     if missing:
         raise SystemExit(f"candidate is missing judged paths: {missing}")
-    if modified != ["logbook.json"]:
+    if modified != ALLOWED_MODIFIED_JUDGED_FILES:
         raise SystemExit(
-            "unexpected changes to judged files; only logbook.json may be additive: "
+            "unexpected changes to judged files; only README.md and "
+            "logbook.json may change for canonical navigation: "
             f"{modified}"
         )
 
@@ -176,7 +192,9 @@ def main() -> None:
             for path in judged
             if path.startswith("pages/")
         ),
-        "passed": not missing and modified == ["logbook.json"],
+        "passed": (
+            not missing and modified == ALLOWED_MODIFIED_JUDGED_FILES
+        ),
     }
     (MANIFESTS / "subset-check.json").write_text(
         json.dumps(subset, indent=2, sort_keys=True) + "\n"

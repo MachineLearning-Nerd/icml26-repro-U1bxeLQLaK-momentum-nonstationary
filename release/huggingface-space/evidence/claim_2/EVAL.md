@@ -1,13 +1,9 @@
+# Claim 2 aggregate evaluation
 
-# Claim 2 evaluation
+Verdict: **BLOCKED**
 
-Verdict: **VERIFIED**
-
-- Fano lower bound: `0.550000`.
-- Empirical optimal-classifier error:
-  `0.854820 ± 0.001575` (one SE).
-- Policy-query residual transcript invariant: `True`.
-- SGD beats both HB and NAG in all source-scale stability scenarios:
-  `True`.
-- Stationary HB-acceleration control passes:
-  `True`.
+The `p=infinity,q=1` symbolic specialization, finite Fano certificate, and
+`d=100` pathwise route all pass within scope. They do not cover Theorem 3.7's
+full quantifiers over arbitrary `p,q` and every constant-step policy in
+`Pi_beta`; Appendix E.6 proves the inertia response only for Heavy-Ball.
+The mandatory fourth falsification route found no valid counterexample.

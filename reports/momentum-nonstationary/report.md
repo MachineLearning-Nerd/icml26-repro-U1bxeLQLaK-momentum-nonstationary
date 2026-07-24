@@ -18,7 +18,7 @@ This campaign does **not** claim a new judge score. The last live verdict remain
 | Claim | Paper statement tested | Reproduction verdict | Strongest observed evidence |
 |---|---|---:|---|
 | 1 | Theorem 3.3 has `(1−β)⁻²` initialization and `(1−β)⁻¹` noise scaling | **VERIFIED** | Preserved and rerun: transient slope `2.115`, noise-floor slope `0.987` |
-| 2 | Theorem 3.7 has statistical and inertia minimax terms | **VERIFIED** | Exact exponents `2/3` and `2`; Fano bound `0.55`, empirical error `0.85482 ± 0.00158` |
+| 2 | Theorem 3.7 has statistical and inertia minimax terms for all stated `p,q` and policies | **BLOCKED** | Three scoped routes pass; the universal Nesterov/policy step is not independently closed |
 | 3 | A drift-heavy regime exists where stable SGD outperforms HB/NAG | **VERIFIED** | `d=100`, 20 seeds, 5,000 steps; two-SE separation at every tested `β` |
 | 4 | The imported high-probability conjunction, including absence from SGD | **FALSIFIED** | SGD's displayed bound contains coupling; displayed momentum horizon exponent is `2`, not `1` |
 | 5 | Drift, `β`, and condition number all systematically worsen HB/NAG across the reported models | **BLOCKED** | Three faithful condition-number routes disagree with the reported direction; no assumption-complete counterexample is possible from the underspecified source |
@@ -51,16 +51,16 @@ The archive contains no executable author implementation, so implementation
 choices that the paper does not resolve are treated as uncertainty, not filled
 in silently.
 
-## Claim 2: two genuine lower-bound regimes
+## Claim 2: scoped lower-bound evidence, universal gap
 
 ![Theorem 3.7 statistical and inertia terms](images/claim2-two-regimes.png)
 
 Theorem 3.7 is a restricted minimax result over constant-step
 `SGDM(β)` policies. For the valid `p=∞, q=1` specialization, the generator
-evaluates the two displayed terms over a variation-budget sweep. Their measured
-beta exponents are exactly the source-derived values: `2/3` for the statistical
-term and `2` for the inertia term. At low variation the former dominates; at
-high variation the latter dominates for every tested `β`.
+evaluates the two displayed terms over a variation-budget sweep. Independent
+symbolic simplification gives beta exponents `2/3` for the statistical term and
+`2` for the inertia term. The plotted sweep only illustrates their crossover;
+formula-generated slopes are not treated as independent verification.
 
 The information-theoretic part is tested separately with a 16-hypothesis
 Gaussian location family observed through four noisy gradients. A finite Fano
@@ -75,6 +75,14 @@ A second route tests the inertia mechanism in the `d=100`, 20-seed tracking
 suite, while a stationary deterministic control requires HB to accelerate
 (`0.0314` versus SGD's `0.1954` squared error). This prevents the invalid
 conclusion that momentum is intrinsically worse in every setting.
+
+These routes are non-circular but scoped. Theorem 3.7 quantifies over arbitrary
+`p,q` and every constant-step policy in `Pi_beta`; Appendix E.6 proves the
+inertia response only for Heavy-Ball and says an analogous Nesterov analysis
+can be carried out. Three finite or specialized routes therefore cannot verify
+the full theorem. A mandatory fourth falsification audit tested four candidate
+contradictions, found none assumption-complete, and leaves Claim 2
+**BLOCKED**.
 
 ## Claim 3: replacing the one-dimensional proxy
 
@@ -196,10 +204,11 @@ record without deleting its history.
 
 ## Assessment
 
-Claims 1–3 now have direct reproducible support at their stated level. Claim 4
-has a reproducible source-level falsification of the exact imported wording and
-a separately verified narrower interpretation. Claim 5 remains honestly
-blocked after the required four distinct routes. A stronger Claim 5 conclusion
-would require the authors' exact executable experiment pipeline or enough
-missing implementation detail to establish that one of the tested routes is
-the intended finite experiment.
+Claims 1 and 3 have direct reproducible support at their stated level. Claim 2
+has three reproducible scoped routes but remains blocked under universal
+theorem calibration. Claim 4 has a reproducible source-level falsification of
+the exact imported wording and a separately verified narrower interpretation.
+Claim 5 remains honestly blocked after the required four distinct routes. A
+stronger Claim 5 conclusion would require the authors' exact executable
+experiment pipeline or enough missing implementation detail to establish that
+one of the tested routes is the intended finite experiment.

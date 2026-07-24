@@ -1,0 +1,9 @@
+{
+  "reviewer_started_from": [
+    "README.md",
+    "logbook.json"
+  ],
+  "status": "PENDING CLEAN-REVISION TRAVERSAL",
+  "all_rows_complete": false,
+  "visibility_matrix": []
+}

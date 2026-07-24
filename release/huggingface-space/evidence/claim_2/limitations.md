@@ -1,6 +1,6 @@
-
 # Claim 2 limitations and deviations
 
-The Monte Carlo route is a finite specialization, not a formal proof for every
-`p,q`.  It tests the information obstruction and a source-scale inertia regime
-directly.  Hidden minimax constants remain unestimated.
+The first three routes are non-circular scoped checks, not a proof of the
+universally quantified minimax theorem. Full resolution requires a proof
+certificate for all `p,q` and all policies in `Pi_beta`, including Nesterov, or
+an assumption-satisfying counterexample. Route 4 found neither.

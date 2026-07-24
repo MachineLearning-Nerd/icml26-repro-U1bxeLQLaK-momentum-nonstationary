@@ -20,7 +20,7 @@ The broader result is deliberately mixed:
 | Claim | Paper quantity or statement | Observed evidence | Assessment |
 |---|---|---|---:|
 | 1 | initialization exponent `2`; noise exponent `1` versus `1/(1−β)` | `2.115`; `0.987` | **VERIFIED** |
-| 2 | Theorem 3.7 statistical exponent `2/3` and inertia exponent `2` | `0.6666667`; `2.0000000`, plus Fano certificate | **VERIFIED** |
+| 2 | Theorem 3.7 statistical exponent `2/3` and inertia exponent `2` for all stated `p,q` and policies | three scoped routes pass; the all-policy Nesterov step is not independently closed | **BLOCKED** |
 | 3 | stable SGD outperforms momentum in a drift-heavy regime | at `β=.98`: SGD `0.002417`, HB `0.236482`, NAG `0.231877` | **VERIFIED** |
 | 4 | horizon exponent `1`, coupling exponent `2`, both absent from SGD | displayed horizon `2`; coefficient ratio `2`; SGD coupling present | **FALSIFIED** as written |
 | 5 | drift, `β`, and `κ` systematically worsen HB/NAG across reported models | three `κ=1000/κ=10` HB ratios: `0.0179`, `0.0183`, `0.0302`; no exact author code | **BLOCKED** |
@@ -30,6 +30,12 @@ though the imported conjunction is falsified. Claim 5 is not promoted from a
 numerical disagreement to a falsification: the source omits enough finite
 experiment detail that none of four counterexample routes satisfies an exact
 assumption-complete contract.
+
+The evaluator-visible release additionally downgrades Claim 2 from a scoped
+pass to **BLOCKED**. Its finite Fano, symbolic `p=∞,q=1`, and full-dimensional
+routes remain useful, but a universal minimax theorem cannot be verified from
+those finite specializations. A mandatory fourth falsification audit found no
+valid counterexample.
 
 Read the [illustrated technical report](reports/momentum-nonstationary/report.md)
 or explore the self-contained

@@ -1,6 +1,11 @@
 {
-  "fano_empirical_error": 0.85482,
-  "fano_lower_bound": 0.55,
+  "aggregate_verdict": "BLOCKED",
+  "finite_fano_empirical_error": 0.85482,
+  "finite_fano_lower_bound": 0.55,
   "passed": true,
-  "sgd_wins_all_stability_scenarios": true
+  "route_1_scoped_passed": true,
+  "route_2_scoped_passed": true,
+  "route_3_scoped_passed": true,
+  "route_4_completed": true,
+  "universal_quantifiers_closed": false
 }

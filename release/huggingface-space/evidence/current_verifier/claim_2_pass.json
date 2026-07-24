@@ -1,0 +1,25 @@
+{
+  "command": "uv run --project campaign python campaign/repro/src/published_claim_verifier.py --claim claim_2 --evidence-root evidence",
+  "exit_code": 0,
+  "stdout": {
+    "checks": {
+      "aggregate_contract_is_blocked": true,
+      "finite_fano_assumptions_satisfied": true,
+      "finite_fano_bound_below_empirical_error": true,
+      "input_sha256": {
+        "claim_contract.json": "789203be6e076861840a0187a6cc60e24508054d8c82a67e83468fbb95984ed4",
+        "fano_certificate.json": "b3a706eff48dd73f61550a95d20c0f3226a4b224760169daf9f6dc73fb40f111",
+        "fano_monte_carlo.json": "42abc44ef8e62b4e9acf452c69da597a73f0b52e30ae3bccf0ef164f40c1a38b",
+        "route_4/candidate_counterexamples.json": "9ecde92f55ad8cbd0ce0ad903e7151346edffb0535ebe68fbbfbadbfc3e74662"
+      },
+      "optimizer_independent_transcript": true,
+      "passed": true,
+      "route_4_candidate_count": 4,
+      "route_4_has_no_valid_exact_counterexample": true
+    },
+    "claim": "claim_2",
+    "failure_injected": false,
+    "passed": true,
+    "scientific_verdict": "BLOCKED"
+  }
+}

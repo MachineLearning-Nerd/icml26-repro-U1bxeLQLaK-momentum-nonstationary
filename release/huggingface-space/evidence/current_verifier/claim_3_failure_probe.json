@@ -1,0 +1,24 @@
+{
+  "command": "uv run --project campaign python campaign/repro/src/published_claim_verifier.py --claim claim_3 --evidence-root evidence --inject-failure",
+  "exit_code": 1,
+  "expected_nonzero": true,
+  "stdout": {
+    "checks": {
+      "all_steps_within_declared_caps": false,
+      "dimensions_are_100": true,
+      "horizons_are_5000": true,
+      "input_sha256": {
+        "stability_summary.csv": "29c8e05da1e868bd43af90ee064b2b557a9377e0fd0c85514032c013424e44b6",
+        "stability_trials.csv": "9fe0670bf87d41903779c01de139f5f50be119607b606e75b00da9da8901908e"
+      },
+      "passed": false,
+      "raw_trial_rows": 240,
+      "seed_indices_are_0_through_19": true,
+      "two_sem_separation_at_every_beta": true
+    },
+    "claim": "claim_3",
+    "failure_injected": true,
+    "passed": false,
+    "scientific_verdict": "VERIFIED"
+  }
+}
