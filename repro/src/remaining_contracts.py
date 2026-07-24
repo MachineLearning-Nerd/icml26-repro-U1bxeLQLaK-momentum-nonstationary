@@ -339,7 +339,12 @@ Verdict: **{verdict}**
 - Stationary Heavy-Ball acceleration control passes:
   `{control["hb_accelerates"]}`.
 """)
-    metadata = _metadata(started, [260_112_238 + index for index in range(20)])
+    stream_seeds = [
+        260_112_238 + int(beta * 1000) + 10_000 * method_index
+        for beta in betas
+        for method_index, _ in enumerate(METHODS)
+    ]
+    metadata = _metadata(started, stream_seeds)
     _write_json(out / "run_metadata.json", metadata)
     return {"verdict": verdict, **independent}
 

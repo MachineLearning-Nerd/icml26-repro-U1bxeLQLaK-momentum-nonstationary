@@ -5,6 +5,7 @@ import csv
 from pathlib import Path
 
 from claim1_regression import run_claim1_regression
+from evaluator_visible_release import run_evaluator_visible_release
 from exact_contracts import run_exact_contracts
 from pathwise_contracts import run_pathwise_contracts
 from remaining_contracts import run_remaining_contracts
@@ -27,6 +28,7 @@ def main() -> None:
     run_exact_contracts()
     run_pathwise_contracts()
     run_remaining_contracts()
+    run_evaluator_visible_release()
 
 
 if __name__ == "__main__":
