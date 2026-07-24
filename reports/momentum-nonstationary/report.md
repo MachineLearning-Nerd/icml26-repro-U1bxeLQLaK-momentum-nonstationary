@@ -188,6 +188,10 @@ The campaign grew downward from a frozen baseline:
 - [accepted Claim 1 cumulative regression](https://github.com/MachineLearning-Nerd/icml26-repro-U1bxeLQLaK-momentum-nonstationary/tree/orx/cumulative-accepted-claim-1-regressions):
   exact judged transient/noise scripts plus independent checker, commit
   `ca408ac731d288f21cd8ebfc9fb4d5d4ea8a1ef1`, 5m53s.
+- [evaluator-visible evidence gate](https://github.com/MachineLearning-Nerd/icml26-repro-U1bxeLQLaK-momentum-nonstationary/tree/orx/evaluator-visible-evidence-gate):
+  canonical navigation, standalone verifier, failure probes, universal-theorem
+  calibration, and two clean-room reviews, commit
+  `4262c042f9f983c31b541f8f5b61b27cdfff2b9a`, 8m41s.
 
 All formal compute was local CPU and incurred no external compute cost. No GPU
 or Hugging Face compute was used. Failed-closed branches are retained in the
