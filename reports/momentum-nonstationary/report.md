@@ -177,6 +177,9 @@ The campaign grew downward from a frozen baseline:
 - [winning scientific branch](https://github.com/MachineLearning-Nerd/icml26-repro-U1bxeLQLaK-momentum-nonstationary/tree/orx/claim-5-mandatory-falsification-audit):
   all claim routes and regressions, commit
   `61faf82dbc11f46c01b156f8b60ef68bc70d5450`, 15m15s.
+- [accepted Claim 1 cumulative regression](https://github.com/MachineLearning-Nerd/icml26-repro-U1bxeLQLaK-momentum-nonstationary/tree/orx/cumulative-accepted-claim-1-regressions):
+  exact judged transient/noise scripts plus independent checker, commit
+  `ca408ac731d288f21cd8ebfc9fb4d5d4ea8a1ef1`, 5m53s.
 
 All formal compute was local CPU and incurred no external compute cost. No GPU
 or Hugging Face compute was used. Failed-closed branches are retained in the

@@ -4,6 +4,7 @@ from __future__ import annotations
 import csv
 from pathlib import Path
 
+from claim1_regression import run_claim1_regression
 from exact_contracts import run_exact_contracts
 from pathwise_contracts import run_pathwise_contracts
 from remaining_contracts import run_remaining_contracts
@@ -22,6 +23,7 @@ def main() -> None:
     with (ROOT/"outputs"/"theory_certificates.csv").open("w",newline="") as handle:
         writer=csv.DictWriter(handle,fieldnames=list(rows[0]));writer.writeheader();writer.writerows(rows)
     print("certificate rows",len(rows),"response ratio",rows[-1]["jump_response_steps"]/rows[0]["jump_response_steps"])
+    run_claim1_regression()
     run_exact_contracts()
     run_pathwise_contracts()
     run_remaining_contracts()

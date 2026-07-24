@@ -1,0 +1,78 @@
+{
+  "claim": "C0_Thm3.3_initialization_term_(1-beta)^-2_amplification",
+  "paper": "arXiv:2601.12238",
+  "lifted_operator": [
+    {
+      "beta": 0.5,
+      "gamma": 0.05,
+      "rho(M)": 0.88508,
+      "transient_growth_G": 2.5077,
+      "G^2": 6.289,
+      "eig_cond_kappa": 9.476,
+      "predicted_1/(1-beta)^2": 4.0
+    },
+    {
+      "beta": 0.6,
+      "gamma": 0.032,
+      "rho(M)": 0.90506,
+      "transient_growth_G": 3.2337,
+      "G^2": 10.457,
+      "eig_cond_kappa": 13.2916,
+      "predicted_1/(1-beta)^2": 6.25
+    },
+    {
+      "beta": 0.7,
+      "gamma": 0.018,
+      "rho(M)": 0.92633,
+      "transient_growth_G": 4.4874,
+      "G^2": 20.137,
+      "eig_cond_kappa": 19.973,
+      "predicted_1/(1-beta)^2": 11.111
+    },
+    {
+      "beta": 0.8,
+      "gamma": 0.008,
+      "rho(M)": 0.94907,
+      "transient_growth_G": 7.0111,
+      "G^2": 49.155,
+      "eig_cond_kappa": 33.9495,
+      "predicted_1/(1-beta)^2": 25.0
+    },
+    {
+      "beta": 0.9,
+      "gamma": 0.002,
+      "rho(M)": 0.97352,
+      "transient_growth_G": 14.6158,
+      "G^2": 213.622,
+      "eig_cond_kappa": 77.5155,
+      "predicted_1/(1-beta)^2": 100.0
+    },
+    {
+      "beta": 0.95,
+      "gamma": 0.0005,
+      "rho(M)": 0.98648,
+      "transient_growth_G": 29.8558,
+      "G^2": 891.367,
+      "eig_cond_kappa": 166.2648,
+      "predicted_1/(1-beta)^2": 400.0
+    },
+    {
+      "beta": 0.98,
+      "gamma": 8e-05,
+      "rho(M)": 0.99452,
+      "transient_growth_G": 75.5949,
+      "G^2": 5714.591,
+      "eig_cond_kappa": 434.1293,
+      "predicted_1/(1-beta)^2": 2500.0
+    }
+  ],
+  "all_stable_rho_lt_1": true,
+  "G^2_loglog_slope_vs_1/(1-beta)": 2.115,
+  "kappa_loglog_slope_vs_1/(1-beta)": 1.183,
+  "transient_growth_scales_(1-beta)^-2": true,
+  "eig_conditioning_scales_(1-beta)^-1": true,
+  "sgd_contraction_factor": 0.8,
+  "sgd_transient_growth_G": 1.0,
+  "sgd_no_transient_amplification": true,
+  "verdict": "supports"
+}

@@ -23,6 +23,12 @@
         "file": "pages/campaign-2026-07-23/page.md",
         "children": [
           {
+            "slug": "campaign-claim-1",
+            "title": "Campaign Claim 1",
+            "file": "pages/campaign-claim-1/page.md",
+            "children": []
+          },
+          {
             "slug": "campaign-claim-2",
             "title": "Campaign Claim 2",
             "file": "pages/campaign-claim-2/page.md",

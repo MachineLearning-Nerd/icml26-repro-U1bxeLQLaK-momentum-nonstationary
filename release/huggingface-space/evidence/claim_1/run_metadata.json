@@ -1,0 +1,16 @@
+{
+  "cpu_count": 8,
+  "deterministic_seeds": [
+    0
+  ],
+  "environment": {
+    "lockfile": "uv.lock",
+    "manager": "uv",
+    "python_constraint": ">=3.12,<3.13"
+  },
+  "fixed_command": "uv sync --frozen && uv run --no-sync pytest -q repro/tests && uv run --no-sync python repro/src/run_theory_certificates.py && uv run --no-sync python repro/src/run_quadratic_grid.py && uv run --no-sync python repro/src/verify_claims.py && uv run --no-sync python repro/src/build_evidence_bundle.py",
+  "git_sha": "ca408ac731d288f21cd8ebfc9fb4d5d4ea8a1ef1",
+  "platform": "macOS-26.5.2-arm64-arm-64bit",
+  "python": "3.12.11",
+  "runtime_seconds": 21.85894691700014
+}
