@@ -1,5 +1,4 @@
 {
-  "all_claims_complete": false,
   "claim_count": 5,
   "claims": {
     "C1": {
@@ -34,13 +33,7 @@
     }
   },
   "earned_points": null,
-  "evidence_bundle": {
-    "bytes": 61300,
-    "file_count": 326,
-    "path": "outputs/evidence_bundle.jsonl",
-    "sha256": "eb794317670471930f536c3b35fecfa5e973d51ef2bc730f3429cc1cb4367a5b"
-  },
-  "gate_version": "publication-v1",
+  "gate_version": "scoped-v1",
   "limitations": [
     "Theorem 3.7 universal p,q and all-policy quantifiers are not independently closed.",
     "The source archive has no executable author experiment repository.",
@@ -50,7 +43,6 @@
   "overall_status": "VERIFIED_SCOPED_WITH_FALSIFIED_AND_BLOCKED_CLAIMS",
   "paper": "U1bxeLQLaK",
   "possible_points": null,
-  "publication_gate_passed": true,
   "score_forecast": null,
   "source": {
     "evidence_arxiv_version": "v4",
@@ -59,10 +51,27 @@
   },
   "status": "SCOPED_PASS",
   "strict_status": "NOT_READY",
-  "tests": [
-    "python -m pytest -q repro/tests: passed"
-  ],
-  "tests_passed": true,
   "verified_claims": 2,
-  "verifiers_passed": true
+  "verifier_exit_codes": {
+    "claim_1": {
+      "failure_probe": 1,
+      "normal": 0
+    },
+    "claim_2": {
+      "failure_probe": 1,
+      "normal": 0
+    },
+    "claim_3": {
+      "failure_probe": 1,
+      "normal": 0
+    },
+    "claim_4": {
+      "failure_probe": 1,
+      "normal": 0
+    },
+    "claim_5": {
+      "failure_probe": 1,
+      "normal": 0
+    }
+  }
 }

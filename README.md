@@ -1,90 +1,164 @@
-# Reproducing momentum suboptimality under nonstationarity
+# ICML 2026 Reproduction: Momentum SGD under Nonstationary Drift
 
-[![Open in molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/MachineLearning-Nerd/icml26-repro-U1bxeLQLaK-momentum-nonstationary/blob/master/notebooks/momentum_nonstationary.py)
+This repository is a clean-room, claim-by-claim audit of [*On the Provable
+Suboptimality of Momentum SGD in Nonstationary Stochastic
+Optimization*](https://arxiv.org/abs/2601.12238), associated with OpenReview
+paper [`U1bxeLQLaK`](https://openreview.net/forum?id=U1bxeLQLaK).
 
-This repository is a clean-room, claim-by-claim reproduction of
-**“On the Provable Suboptimality of Momentum SGD in Nonstationary Stochastic
-Optimization”** ([arXiv:2601.12238](https://arxiv.org/abs/2601.12238)).
-The previous live judge score remains **3/10**; no new score is claimed before
-the live judge evaluates a published revision.
+- Authors: Sharan Sahu, Cameron J. Hogan, and Martin T. Wells
+- Venue: ICML 2026
+- Canonical repository: [`MachineLearning-Nerd/icml26-momentum-sgd-nonstationary-optimization`](https://github.com/MachineLearning-Nerd/icml26-momentum-sgd-nonstationary-optimization)
+- Paper source pinned by this audit: arXiv `2601.12238v4`
+- Latest arXiv record: [arXiv:2601.12238](https://arxiv.org/abs/2601.12238)
 
-The central new experiment replaces a one-dimensional proxy with a
-100-dimensional drifting quadratic: 20 deterministic seeds, 5,000 steps, and
-step sizes inside the paper's declared stability caps. Plain SGD's tail squared
-tracking error stays near `0.0024`; at `β=0.98`, HB reaches `0.2365` and NAG
-`0.2319`. This directly verifies the paper's existential drift-heavy regime
-claim under the tested contract.
+## Status
 
-The broader result is deliberately mixed:
+`SCOPED_PASS` — `VERIFIED_SCOPED_WITH_FALSIFIED_AND_BLOCKED_CLAIMS`
 
-| Claim | Paper quantity or statement | Observed evidence | Assessment |
-|---|---|---|---:|
-| 1 | initialization exponent `2`; noise exponent `1` versus `1/(1−β)` | `2.115`; `0.987` | **VERIFIED** |
-| 2 | Theorem 3.7 statistical exponent `2/3` and inertia exponent `2` for all stated `p,q` and policies | three scoped routes pass; the all-policy Nesterov step is not independently closed | **BLOCKED** |
-| 3 | stable SGD outperforms momentum in a drift-heavy regime | at `β=.98`: SGD `0.002417`, HB `0.236482`, NAG `0.231877` | **VERIFIED** |
-| 4 | horizon exponent `1`, coupling exponent `2`, both absent from SGD | displayed horizon `2`; coefficient ratio `2`; SGD coupling present | **FALSIFIED** as written |
-| 5 | drift, `β`, and `κ` systematically worsen HB/NAG across reported models | three `κ=1000/κ=10` HB ratios: `0.0179`, `0.0183`, `0.0302`; no exact author code | **BLOCKED** |
+The committed evidence is internally consistent, but the scientific outcome
+is mixed. Claims 1 and 3 are verified within their stated finite scopes. Claim
+2 remains blocked by universal theorem quantifiers, Claim 4 is falsified as
+the imported conjunction, and Claim 5 remains blocked because the source does
+not specify enough finite-experiment detail for an exact replication.
 
-Claim 4's narrower momentum-specific coefficient statement is verified, even
-though the imported conjunction is falsified. Claim 5 is not promoted from a
-numerical disagreement to a falsification: the source omits enough finite
-experiment detail that none of four counterexample routes satisfies an exact
-assumption-complete contract.
+The strict paper-level status is `NOT_READY`: this is not a complete replication
+of every theorem quantifier or every Section 4 model class. The previous live
+judge score was `3/10`; this repository claims no new evaluator score and makes
+no score forecast. A passing publication gate means that the evidence and its
+negative controls are reproducible, not that every paper claim passed.
 
-The evaluator-visible release additionally downgrades Claim 2 from a scoped
-pass to **BLOCKED**. Its finite Fano, symbolic `p=∞,q=1`, and full-dimensional
-routes remain useful, but a universal minimax theorem cannot be verified from
-those finite specializations. A mandatory fourth falsification audit found no
-valid counterexample.
+The canonical machine-readable gate is
+[`publication_gate.json`](publication_gate.json), with an identical copy at
+[`outputs/publication_gate.json`](outputs/publication_gate.json). The claim
+ledger is in [`docs/CLAIM_EVIDENCE.md`](docs/CLAIM_EVIDENCE.md).
 
-Read the [illustrated technical report](reports/momentum-nonstationary/report.md)
-or explore the self-contained
-[marimo tutorial](notebooks/momentum_nonstationary.py). The notebook embeds the
-completed small results and does not require rerunning the campaign to see the
-evidence.
+## What the paper does
 
-## Compute and substitutions
+The paper studies SGD, Polyak Heavy-Ball (HB), and Nesterov momentum while the
+optimizer tracks a time-varying strongly convex and smooth optimum. Its main
+path is:
 
-- Compute: local CPU only, 8-core Apple silicon; no GPU and no Hugging Face
-  compute used.
-- Environment: one repository `.venv`, Python `3.12.11`, `uv sync --frozen`,
-  committed `pyproject.toml` and `uv.lock`.
-- Implementation: clean-room from arXiv `2601.12238v4`; the source archive
-  contains no executable author repository.
-- Claim 3: full `d=100`, 20-seed, 5,000-step controlled quadratic witness, not
-  the previous 1D proxy.
-- Claim 5: source-scale quadratic/linear condition-number routes are complete;
-  an exact source-scale logistic/MLP rerun remains unavailable without the
-  missing author pipeline.
+1. decompose tracking error into transient, stochastic-noise, and drift terms;
+2. derive momentum-dependent stability and inertia effects;
+3. prove information-theoretic lower-bound mechanisms for nonstationary
+   stochastic optimization; and
+4. use drifting quadratic, linear/logistic, and MLP experiments to illustrate
+   regimes in which stale-gradient averaging hurts tracking.
 
-## Experiment log
+This repository reimplements auditable mathematical and finite numerical
+contracts from the paper. The arXiv source archive contains the paper TeX and
+figures but no executable author experiment repository; see
+[`docs/SOURCE_AUDIT.md`](docs/SOURCE_AUDIT.md).
 
-All formal nodes inherit the same command verbatim. `master` is the public
-presentation surface and has not been launched as an experiment.
+## Claim-to-evidence summary
 
-| Branch / experiment | Purpose or change | Exact run command | Assessment / outcome | Compute |
-|---|---|---|---|---|
-| `master` | README, report, notebook, and publication surface | Not run as an experiment (publication surface) | Last live judge remains `3/10` | N/A |
-| [`orx/validated-baseline-at-0181de32`](https://github.com/MachineLearning-Nerd/icml26-repro-U1bxeLQLaK-momentum-nonstationary/tree/orx/validated-baseline-at-0181de32) | Freeze starting SHA, lock the `uv` environment, rerun accepted checks | `uv sync --frozen && uv run --no-sync pytest -q repro/tests && uv run --no-sync python repro/src/run_theory_certificates.py && uv run --no-sync python repro/src/run_quadratic_grid.py && uv run --no-sync python repro/src/verify_claims.py && uv run --no-sync python repro/src/build_evidence_bundle.py` | Pass; 10m05s | local CPU |
-| [`orx/theory-first-exact-contracts`](https://github.com/MachineLearning-Nerd/icml26-repro-U1bxeLQLaK-momentum-nonstationary/tree/orx/theory-first-exact-contracts) | Exact Claim 2 decomposition/Fano route and Claim 4 source audit | `uv sync --frozen && uv run --no-sync pytest -q repro/tests && uv run --no-sync python repro/src/run_theory_certificates.py && uv run --no-sync python repro/src/run_quadratic_grid.py && uv run --no-sync python repro/src/verify_claims.py && uv run --no-sync python repro/src/build_evidence_bundle.py` | Claim 2 VERIFIED; exact Claim 4 wording FALSIFIED; 6m01s | local CPU |
-| [`orx/simulation-first-pathwise-contracts`](https://github.com/MachineLearning-Nerd/icml26-repro-U1bxeLQLaK-momentum-nonstationary/tree/orx/simulation-first-pathwise-contracts) | Independent pathwise Claim 2/4 route | `uv sync --frozen && uv run --no-sync pytest -q repro/tests && uv run --no-sync python repro/src/run_theory_certificates.py && uv run --no-sync python repro/src/run_quadratic_grid.py && uv run --no-sync python repro/src/verify_claims.py && uv run --no-sync python repro/src/build_evidence_bundle.py` | Claim 2 VERIFIED; narrower Claim 4 coefficient VERIFIED; 2m56s | local CPU |
-| [`orx/claim-5-mandatory-falsification-audit`](https://github.com/MachineLearning-Nerd/icml26-repro-U1bxeLQLaK-momentum-nonstationary/tree/orx/claim-5-mandatory-falsification-audit) | Full-dimensional Claim 3 plus all four Claim 5 routes and cumulative regressions | `uv sync --frozen && uv run --no-sync pytest -q repro/tests && uv run --no-sync python repro/src/run_theory_certificates.py && uv run --no-sync python repro/src/run_quadratic_grid.py && uv run --no-sync python repro/src/verify_claims.py && uv run --no-sync python repro/src/build_evidence_bundle.py` | Claims 1–3 pass; Claim 4 exact audit passes as FALSIFIED; Claim 5 BLOCKED; 15m15s | local CPU |
-| [`orx/cumulative-accepted-claim-1-regressions`](https://github.com/MachineLearning-Nerd/icml26-repro-U1bxeLQLaK-momentum-nonstationary/tree/orx/cumulative-accepted-claim-1-regressions) | Re-execute the exact judge-accepted Claim 1 transient and noise-floor scripts inside the cumulative entrypoint | `uv sync --frozen && uv run --no-sync pytest -q repro/tests && uv run --no-sync python repro/src/run_theory_certificates.py && uv run --no-sync python repro/src/run_quadratic_grid.py && uv run --no-sync python repro/src/verify_claims.py && uv run --no-sync python repro/src/build_evidence_bundle.py` | Claim 1 VERIFIED at slopes `2.114937` and `0.986807`; all Claim 2–5 outcomes unchanged; 5m53s | local CPU |
-| [`orx/evaluator-visible-evidence-gate`](https://github.com/MachineLearning-Nerd/icml26-repro-U1bxeLQLaK-momentum-nonstationary/tree/orx/evaluator-visible-evidence-gate) | Make current evidence discoverable from the canonical logbook entrypoint; add standalone verifier, failure probes, universal-theorem calibration, and two blind reviews | `uv sync --frozen && uv run --no-sync pytest -q repro/tests && uv run --no-sync python repro/src/run_theory_certificates.py && uv run --no-sync python repro/src/run_quadratic_grid.py && uv run --no-sync python repro/src/verify_claims.py && uv run --no-sync python repro/src/build_evidence_bundle.py` | 18 tests pass; visible outcomes C1 VERIFIED, C2 BLOCKED, C3 VERIFIED, C4 FALSIFIED, C5 BLOCKED; all five failure probes exit nonzero; 8m41s | local CPU |
+| Claim | Paper statement audited | How the result is produced | Current outcome |
+| --- | --- | --- | --- |
+| C1 | Theorem 3.3: momentum initialization amplification of order `(1-β)⁻²` and noise-floor amplification of order `(1-β)⁻¹` relative to SGD | `repro/src/claim1_regression.py`, `verify_tracking.py`, and `verify_c0_transient.py` produce the raw transient/noise JSON; the independent checker recomputes both log-log slopes from those files | **VERIFIED_SCOPED** — slopes `2.115` and `0.987` |
+| C2 | Theorem 3.7: statistical exponent `2/3` and inertia exponent `2` for all stated `p,q` and policies | `exact_contracts.py`, `pathwise_contracts.py`, `run_theory_certificates.py`, and the full-dimensional route produce symbolic, Fano, tracking, and negative-control evidence; the route-4 audit tests candidate counterexamples | **BLOCKED** — finite/scoped routes pass, but the universal policy-level theorem is not closed |
+| C3 | In an existential drift-heavy regime, stable SGD can track better than HB and NAG | `remaining_contracts.py` and `run_quadratic_grid.py` produce `d=100`, 20-seed, 5,000-step raw trials; the checker validates caps, dimensions, horizons, seeds, row count, and two-SE separation | **VERIFIED_SCOPED** — at `β=.98`, SGD `0.002417`, HB `0.236482`, NAG `0.231877` |
+| C4 | Imported conjunction about a `(1-β)⁻²` horizon and the absence of the coupling from SGD | `exact_contracts.py` and `pathwise_contracts.py` produce coefficient, horizon, and pathwise coupling audits; the checker tests the displayed source formula and the narrower interpretation separately | **FALSIFIED AS WRITTEN** — displayed horizon slope is `2`, and SGD also has a coupling term; the narrower momentum-specific coefficient is verified |
+| C5 | Section 4 systematically shows drift, `β`, and condition number worsening HB/NAG across reported models | `remaining_contracts.py` produces moment-matched, raw-minibatch, exact-spectral, and falsification-audit routes; the checker requires four routes and an assumption-complete counterexample before falsifying | **BLOCKED** — routes disagree and author implementation details are unavailable |
 
-## Run locally
+The verifier returns exit code `0` when each expected verdict is supported by
+its shipped evidence. It deliberately returns a scientific verdict of
+`BLOCKED` or `FALSIFIED` where appropriate; those are not silently converted
+to passes.
+
+## Repository contents
+
+| Path | Purpose |
+| --- | --- |
+| `docs/primary.pdf` | Pinned arXiv v4 PDF used for the source audit |
+| `docs/arxiv_source.tar` | Pinned TeX/figure source archive |
+| `repro/src/` | Clean-room producers, contracts, independent checker, and gates |
+| `repro/tests/` | Focused recurrence, contract, and visibility tests |
+| `.openresearch/artifacts/` | Provenance and raw claim artifacts produced during the campaign |
+| `release/huggingface-space/evidence/` | Evaluator-visible copy of the current text evidence |
+| `outputs/` | Hash-bound summaries, manifests, and gate outputs |
+| `reports/momentum-nonstationary/report.md` | Illustrated technical report |
+| `notebooks/momentum_nonstationary.py` | Self-contained marimo walkthrough of the core finite result |
+
+## Branch map
+
+The published branch set is intentionally descriptive. The old `orx/*` names
+are retained only in the migration audit so that the original experiment
+history remains traceable. The exact mapping and purpose of every branch are
+in [`docs/BRANCH_AUDIT.md`](docs/BRANCH_AUDIT.md).
+
+| Published branch family | Role |
+| --- | --- |
+| `main` | Canonical README, source pins, current claim ledger, and publication gate |
+| `baseline/*` | Frozen starting point and accepted baseline regression |
+| `audit/*` | Theory, pathwise, and mandatory falsification audits |
+| `regression/*` | Cumulative regression of accepted evidence |
+| `experiment/*` | Condition-number and full-dimensional experiment routes |
+| `release/*` | Evaluator-visible, candidate, and final release snapshots |
+
+Branch names describe the work; they do not imply that a branch's scientific
+outcome is a full paper replication.
+
+## Reproduce the scoped gate
+
+Create a Python 3.12 environment, install the locked dependencies, and run the
+deterministic gate:
 
 ```bash
 uv sync --frozen
-uv run --no-sync marimo edit notebooks/momentum_nonstationary.py
+uv run --no-sync python repro/src/publication_gate.py
 ```
 
-To regenerate the formal machine-readable evidence:
+The default gate reads the committed evidence, runs the focused tests, runs the five independent
+claim verifiers plus their injected-failure probes, rebuilds the deterministic
+hash manifest, and writes both gate copies. It does not require a GPU, a
+Hugging Face token, private paths, or a data download.
+
+The older full campaign command remains available for historical comparison:
 
 ```bash
-uv sync --frozen && uv run --no-sync pytest -q repro/tests && uv run --no-sync python repro/src/run_theory_certificates.py && uv run --no-sync python repro/src/run_quadratic_grid.py && uv run --no-sync python repro/src/verify_claims.py && uv run --no-sync python repro/src/build_evidence_bundle.py
+uv sync --frozen && uv run --no-sync pytest -q repro/tests && \
+uv run --no-sync python repro/src/run_theory_certificates.py && \
+uv run --no-sync python repro/src/run_quadratic_grid.py && \
+uv run --no-sync python repro/src/verify_claims.py && \
+uv run --no-sync python repro/src/build_evidence_bundle.py
 ```
 
-Raw contracts, CSV/JSON results, independent checker outputs, negative controls,
-runtime metadata, evaluations, and limitations are under
-`.openresearch/artifacts/`.
+Those generators can take several minutes on CPU. The default publication gate
+is intentionally evidence-first and fail-closed; optional reruns are described
+in [`docs/PUBLICATION_GATE.md`](docs/PUBLICATION_GATE.md).
+
+## Citation
+
+```bibtex
+@article{sahu2026provable,
+  title        = {On the Provable Suboptimality of Momentum SGD in Nonstationary Stochastic Optimization},
+  author       = {Sahu, Sharan and Hogan, Cameron J. and Wells, Martin T.},
+  journal      = {arXiv preprint arXiv:2601.12238},
+  year         = {2026},
+  eprint       = {2601.12238},
+  archivePrefix = {arXiv}
+}
+```
+
+## Thank you
+
+Thank you to Sharan Sahu, Cameron J. Hogan, and Martin T. Wells for developing
+and sharing this analysis of momentum under distribution shift. The explicit
+separation of transient, noise, and drift effects gives reproduction work a
+useful structure: each mathematical feature can be audited independently, and
+uncertainty in the experimental protocol can be reported instead of guessed.
+
+## Scope limits
+
+- The source archive has no executable author experiment repository, so the
+  numerical work here is clean-room code rather than an author-code rerun.
+- C2 checks important finite and specialized routes but does not prove every
+  `p,q` theorem quantifier or every policy in `Π_β`.
+- C3 is one declared full-dimensional stochastic witness, not a universal
+  claim about all nonstationary objectives.
+- C5 does not promote incomplete experimental specifications into a pass or a
+  falsification; the reported model-class results remain unreplicated.
+- The old three-claim `6/6` baseline is preserved in Git history; the current
+  `outputs/` files have been replaced by the authoritative five-claim verdict.
+- `score_forecast` is intentionally `null`; no external evaluator score is
+  claimed.

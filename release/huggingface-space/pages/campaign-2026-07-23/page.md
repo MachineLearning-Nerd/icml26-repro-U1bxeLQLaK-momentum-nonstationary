@@ -1,8 +1,8 @@
 # 2026-07-23 claim-by-claim campaign
 
-This additive campaign responds to the live `3/10` verdict for
-`DineshAI/U1bxeLQLaK@9db6b4452399d8ef19e3f8ca479a627060819fb3`.
-It preserves every page from that judged revision and adds stricter
+This additive campaign responds to the live `3/10` verdict recorded in the
+historical release metadata. It preserves every page from that judged
+revision and adds stricter
 machine-checkable evidence. It does **not** claim a new judge score.
 
 | Claim | Previous points | New evidence verdict | What changed |
@@ -33,9 +33,8 @@ or Hugging Face compute was used.
   `415533d734236070ec5180fdcf6fcc9454dc55a20913f219b5d7f1be19776032`
 - HTML SHA-256:
   `2b97b7d91336a16b7bd7800d3f8ed96ebd17a89474fb36e4c6991e378d7a47ec`
-- winning scientific Git SHA:
-  `61faf82dbc11f46c01b156f8b60ef68bc70d5450`
-- current evaluator-visible verifier commit:
+- winning scientific branch: `audit/claim-5-falsification`
+- pre-migration evaluator-visible verifier commit:
   `a56ee4ac2bb961ee1459245e3a0a3d91b9c73560`
 
 ## Current verifier

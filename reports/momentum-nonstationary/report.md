@@ -176,19 +176,19 @@ a pass.
 
 The campaign grew downward from a frozen baseline:
 
-- [validated baseline](https://github.com/MachineLearning-Nerd/icml26-repro-U1bxeLQLaK-momentum-nonstationary/tree/orx/validated-baseline-at-0181de32):
+- [validated baseline](https://github.com/MachineLearning-Nerd/icml26-momentum-sgd-nonstationary-optimization/tree/baseline/validated-0181de32):
   environment plus cumulative old checks, 10m05s;
-- [theory-first contracts](https://github.com/MachineLearning-Nerd/icml26-repro-U1bxeLQLaK-momentum-nonstationary/tree/orx/theory-first-exact-contracts):
+- [theory-first contracts](https://github.com/MachineLearning-Nerd/icml26-momentum-sgd-nonstationary-optimization/tree/audit/theory-exact-contracts):
   source formula and Fano audits, 6m01s;
-- [pathwise contracts](https://github.com/MachineLearning-Nerd/icml26-repro-U1bxeLQLaK-momentum-nonstationary/tree/orx/simulation-first-pathwise-contracts):
+- [pathwise contracts](https://github.com/MachineLearning-Nerd/icml26-momentum-sgd-nonstationary-optimization/tree/audit/pathwise-contracts):
   independent stochastic route, 2m56s;
-- [winning scientific branch](https://github.com/MachineLearning-Nerd/icml26-repro-U1bxeLQLaK-momentum-nonstationary/tree/orx/claim-5-mandatory-falsification-audit):
+- [winning scientific branch](https://github.com/MachineLearning-Nerd/icml26-momentum-sgd-nonstationary-optimization/tree/audit/claim-5-falsification):
   all claim routes and regressions, commit
   `61faf82dbc11f46c01b156f8b60ef68bc70d5450`, 15m15s.
-- [accepted Claim 1 cumulative regression](https://github.com/MachineLearning-Nerd/icml26-repro-U1bxeLQLaK-momentum-nonstationary/tree/orx/cumulative-accepted-claim-1-regressions):
+- [accepted Claim 1 cumulative regression](https://github.com/MachineLearning-Nerd/icml26-momentum-sgd-nonstationary-optimization/tree/regression/claim-1-accepted):
   exact judged transient/noise scripts plus independent checker, commit
   `ca408ac731d288f21cd8ebfc9fb4d5d4ea8a1ef1`, 5m53s.
-- [evaluator-visible evidence gate](https://github.com/MachineLearning-Nerd/icml26-repro-U1bxeLQLaK-momentum-nonstationary/tree/orx/evaluator-visible-evidence-gate):
+- [evaluator-visible evidence gate](https://github.com/MachineLearning-Nerd/icml26-momentum-sgd-nonstationary-optimization/tree/release/evaluator-visible-gate):
   canonical navigation, standalone verifier, failure probes, universal-theorem
   calibration, and two clean-room reviews, commit
   `4262c042f9f983c31b541f8f5b61b27cdfff2b9a`, 8m41s.

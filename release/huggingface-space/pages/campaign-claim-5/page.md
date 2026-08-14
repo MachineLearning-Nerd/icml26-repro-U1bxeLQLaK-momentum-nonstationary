@@ -116,9 +116,9 @@ the exact finite experiment. See
 
 ## Revision, seeds, CPU, and runtime
 
-- Scientific evidence Git SHA:
+- Pre-migration scientific evidence SHA:
   `61faf82dbc11f46c01b156f8b60ef68bc70d5450`.
-- Current verifier code commit:
+- Pre-migration verifier source SHA:
   `a56ee4ac2bb961ee1459245e3a0a3d91b9c73560`.
 - Deterministic seed interval recorded by the aggregate route:
   `260112810` through `260113800`; exact per-route rules are in source and raw

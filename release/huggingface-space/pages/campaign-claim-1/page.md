@@ -101,9 +101,9 @@ five-dimensional well-conditioned quadratic. Full details:
 
 ## Revision, seeds, CPU, and runtime
 
-- Scientific evidence Git SHA:
+- Pre-migration scientific evidence SHA:
   `ca408ac731d288f21cd8ebfc9fb4d5d4ea8a1ef1`.
-- Current published-verifier code commit:
+- Pre-migration published-verifier source SHA:
   `a56ee4ac2bb961ee1459245e3a0a3d91b9c73560`.
 - Seed: `0`.
 - Python `3.12.11`; 8 CPU cores; macOS arm64.

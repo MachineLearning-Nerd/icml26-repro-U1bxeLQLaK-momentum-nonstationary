@@ -1,0 +1,37 @@
+{
+  "paper": {
+    "title": "On the Provable Suboptimality of Momentum SGD in Nonstationary Stochastic Optimization",
+    "authors": [
+      "Sharan Sahu",
+      "Cameron J. Hogan",
+      "Martin T. Wells"
+    ],
+    "openreview_id": "U1bxeLQLaK",
+    "arxiv_id": "2601.12238",
+    "evidence_arxiv_version": "v4",
+    "latest_arxiv_version_at_documentation": "v5",
+    "arxiv": "https://arxiv.org/abs/2601.12238",
+    "evidence_source_url": "https://export.arxiv.org/e-print/2601.12238",
+    "venue": "ICML 2026",
+    "scope": "five current claim contracts with finite, symbolic, source-algebra, and protocol audits"
+  },
+  "paper_source": {
+    "pdf_path": "docs/primary.pdf",
+    "pdf_sha256": "415533d734236070ec5180fdcf6fcc9454dc55a20913f219b5d7f1be19776032",
+    "source_archive_path": "docs/arxiv_source.tar",
+    "source_archive_sha256": "89ad9ad897d3f9a0210ceab3e61adb356bf32edaa49621c0234a426aef3b3fa9",
+    "retrieved_for_evidence": "2026-07-23",
+    "source_archive_contents": "main.tex, appendix.tex, supporting TeX files, bibliography, and figures"
+  },
+  "official_source": {
+    "repository": null,
+    "status": "not released in the pinned arXiv source archive",
+    "audit": "docs/SOURCE_AUDIT.md"
+  },
+  "evidence": {
+    "artifact_root": ".openresearch/artifacts",
+    "evaluator_visible_root": "release/huggingface-space/evidence",
+    "independent_checker": "repro/src/published_claim_verifier.py",
+    "publication_gate": "repro/src/publication_gate.py"
+  }
+}

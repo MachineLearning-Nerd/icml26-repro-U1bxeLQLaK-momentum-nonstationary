@@ -100,9 +100,9 @@ does not close its analogous proof. See
 
 ## Revision, seeds, CPU, and runtime
 
-- Scientific evidence Git SHA:
+- Pre-migration scientific evidence SHA:
   `61faf82dbc11f46c01b156f8b60ef68bc70d5450`.
-- Current verifier code commit:
+- Pre-migration verifier source SHA:
   `a56ee4ac2bb961ee1459245e3a0a3d91b9c73560`.
 - RNG stream seeds:
   `260112738, 260122738, 260132738, 260113138, 260123138, 260133138,`

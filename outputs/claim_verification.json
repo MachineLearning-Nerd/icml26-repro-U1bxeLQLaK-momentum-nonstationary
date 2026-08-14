@@ -1,30 +1,270 @@
 {
-  "paper": "U1bxeLQLaK",
-  "claim_count": 3,
-  "verified_claims": 3,
-  "possible_points": 6,
-  "earned_points": 6,
-  "all_claims_complete": true,
+  "all_claims_complete": false,
+  "claim_count": 5,
   "claims": {
-    "C1_explicit_drift_amplification": {
-      "passed": true,
-      "beta_low": 0.5,
-      "beta_high": 0.999,
-      "drift_floor_ratio": 89940009999.99966,
-      "response_time_ratio": 501.375
+    "C1": {
+      "evidence_root": "release/huggingface-space/evidence/claim_1",
+      "scientific_verdict": "VERIFIED",
+      "status": "VERIFIED_SCOPED",
+      "verifier_passed": true
     },
-    "C2_drift_dominated_sgd_beats_momentum": {
-      "passed": true,
-      "full_method_cells": 108,
-      "full_trials": 2160,
-      "sgd_wins": 36,
-      "scenarios": 36
+    "C2": {
+      "evidence_root": "release/huggingface-space/evidence/claim_2",
+      "scientific_verdict": "BLOCKED",
+      "status": "BLOCKED_UNIVERSAL_QUANTIFIERS",
+      "verifier_passed": true
     },
-    "C3_inertia_lower_bound_mechanism": {
-      "passed": true,
-      "block_regret_ratio": 526.970956784501,
-      "inertia_window_ratio": 501.375,
-      "source_theorem": "Theorem 3.9"
+    "C3": {
+      "evidence_root": "release/huggingface-space/evidence/claim_3",
+      "scientific_verdict": "VERIFIED",
+      "status": "VERIFIED_SCOPED",
+      "verifier_passed": true
+    },
+    "C4": {
+      "evidence_root": "release/huggingface-space/evidence/claim_4",
+      "scientific_verdict": "FALSIFIED",
+      "status": "FALSIFIED_AS_WRITTEN_WITH_NARROWER_COMPONENT_VERIFIED",
+      "verifier_passed": true
+    },
+    "C5": {
+      "evidence_root": "release/huggingface-space/evidence/claim_5",
+      "scientific_verdict": "BLOCKED",
+      "status": "BLOCKED_PROTOCOL_UNDERSPECIFIED",
+      "verifier_passed": true
+    }
+  },
+  "earned_points": null,
+  "limitations": [
+    "Theorem 3.7 universal p,q and all-policy quantifiers are not independently closed.",
+    "The source archive has no executable author experiment repository.",
+    "Section 4 source-scale logistic/MLP results and raw per-seed metrics are unavailable.",
+    "No external evaluator score or score forecast is claimed."
+  ],
+  "overall_status": "VERIFIED_SCOPED_WITH_FALSIFIED_AND_BLOCKED_CLAIMS",
+  "paper": "U1bxeLQLaK",
+  "possible_points": null,
+  "score_forecast": null,
+  "source": {
+    "evidence_arxiv_version": "v4",
+    "pdf_sha256": "415533d734236070ec5180fdcf6fcc9454dc55a20913f219b5d7f1be19776032",
+    "source_archive_sha256": "89ad9ad897d3f9a0210ceab3e61adb356bf32edaa49621c0234a426aef3b3fa9"
+  },
+  "strict_status": "NOT_READY",
+  "verified_claims": 2,
+  "verifiers": {
+    "claim_1": {
+      "failure_probe": {
+        "checks": {
+          "all_lifted_operators_stable": true,
+          "input_sha256": {
+            "noise_floor_results.json": "a95afd5d720d8c57ec947d0316f959ff6d1f87a0db8566493f2cf6dc0634fee1",
+            "transient_results.json": "5d60117a0d90017064943481f19a0f8b81ba2b67b4e52e16a5f36387e35d8955"
+          },
+          "noise_floor_slope": 0.986807446126115,
+          "noise_slope_in_interval_0.9_1.1": true,
+          "passed": false,
+          "plain_sgd_transient_growth_is_one": true,
+          "transient_slope": 1.0,
+          "transient_slope_in_interval_1.9_2.3": false
+        },
+        "claim": "claim_1",
+        "failure_injected": true,
+        "passed": false,
+        "scientific_verdict": "VERIFIED"
+      },
+      "failure_probe_exit_code": 1,
+      "normal": {
+        "checks": {
+          "all_lifted_operators_stable": true,
+          "input_sha256": {
+            "noise_floor_results.json": "a95afd5d720d8c57ec947d0316f959ff6d1f87a0db8566493f2cf6dc0634fee1",
+            "transient_results.json": "5d60117a0d90017064943481f19a0f8b81ba2b67b4e52e16a5f36387e35d8955"
+          },
+          "noise_floor_slope": 0.986807446126115,
+          "noise_slope_in_interval_0.9_1.1": true,
+          "passed": true,
+          "plain_sgd_transient_growth_is_one": true,
+          "transient_slope": 2.1149370788865216,
+          "transient_slope_in_interval_1.9_2.3": true
+        },
+        "claim": "claim_1",
+        "failure_injected": false,
+        "passed": true,
+        "scientific_verdict": "VERIFIED"
+      },
+      "normal_exit_code": 0
+    },
+    "claim_2": {
+      "failure_probe": {
+        "checks": {
+          "aggregate_contract_is_blocked": true,
+          "finite_fano_assumptions_satisfied": true,
+          "finite_fano_bound_below_empirical_error": false,
+          "input_sha256": {
+            "claim_contract.json": "789203be6e076861840a0187a6cc60e24508054d8c82a67e83468fbb95984ed4",
+            "fano_certificate.json": "b3a706eff48dd73f61550a95d20c0f3226a4b224760169daf9f6dc73fb40f111",
+            "fano_monte_carlo.json": "42abc44ef8e62b4e9acf452c69da597a73f0b52e30ae3bccf0ef164f40c1a38b",
+            "route_4/candidate_counterexamples.json": "9ecde92f55ad8cbd0ce0ad903e7151346edffb0535ebe68fbbfbadbfc3e74662"
+          },
+          "optimizer_independent_transcript": true,
+          "passed": false,
+          "route_4_candidate_count": 4,
+          "route_4_has_no_valid_exact_counterexample": true
+        },
+        "claim": "claim_2",
+        "failure_injected": true,
+        "passed": false,
+        "scientific_verdict": "BLOCKED"
+      },
+      "failure_probe_exit_code": 1,
+      "normal": {
+        "checks": {
+          "aggregate_contract_is_blocked": true,
+          "finite_fano_assumptions_satisfied": true,
+          "finite_fano_bound_below_empirical_error": true,
+          "input_sha256": {
+            "claim_contract.json": "789203be6e076861840a0187a6cc60e24508054d8c82a67e83468fbb95984ed4",
+            "fano_certificate.json": "b3a706eff48dd73f61550a95d20c0f3226a4b224760169daf9f6dc73fb40f111",
+            "fano_monte_carlo.json": "42abc44ef8e62b4e9acf452c69da597a73f0b52e30ae3bccf0ef164f40c1a38b",
+            "route_4/candidate_counterexamples.json": "9ecde92f55ad8cbd0ce0ad903e7151346edffb0535ebe68fbbfbadbfc3e74662"
+          },
+          "optimizer_independent_transcript": true,
+          "passed": true,
+          "route_4_candidate_count": 4,
+          "route_4_has_no_valid_exact_counterexample": true
+        },
+        "claim": "claim_2",
+        "failure_injected": false,
+        "passed": true,
+        "scientific_verdict": "BLOCKED"
+      },
+      "normal_exit_code": 0
+    },
+    "claim_3": {
+      "failure_probe": {
+        "checks": {
+          "all_steps_within_declared_caps": false,
+          "dimensions_are_100": true,
+          "horizons_are_5000": true,
+          "input_sha256": {
+            "stability_summary.csv": "29c8e05da1e868bd43af90ee064b2b557a9377e0fd0c85514032c013424e44b6",
+            "stability_trials.csv": "9fe0670bf87d41903779c01de139f5f50be119607b606e75b00da9da8901908e"
+          },
+          "passed": false,
+          "raw_trial_rows": 240,
+          "seed_indices_are_0_through_19": true,
+          "two_sem_separation_at_every_beta": true
+        },
+        "claim": "claim_3",
+        "failure_injected": true,
+        "passed": false,
+        "scientific_verdict": "VERIFIED"
+      },
+      "failure_probe_exit_code": 1,
+      "normal": {
+        "checks": {
+          "all_steps_within_declared_caps": true,
+          "dimensions_are_100": true,
+          "horizons_are_5000": true,
+          "input_sha256": {
+            "stability_summary.csv": "29c8e05da1e868bd43af90ee064b2b557a9377e0fd0c85514032c013424e44b6",
+            "stability_trials.csv": "9fe0670bf87d41903779c01de139f5f50be119607b606e75b00da9da8901908e"
+          },
+          "passed": true,
+          "raw_trial_rows": 240,
+          "seed_indices_are_0_through_19": true,
+          "two_sem_separation_at_every_beta": true
+        },
+        "claim": "claim_3",
+        "failure_injected": false,
+        "passed": true,
+        "scientific_verdict": "VERIFIED"
+      },
+      "normal_exit_code": 0
+    },
+    "claim_4": {
+      "failure_probe": {
+        "checks": {
+          "coefficient_ratio_slope": 0.0,
+          "coefficient_ratio_slope_is_two": false,
+          "displayed_horizon_slope": 2.0000000000000004,
+          "displayed_horizon_slope_is_two_not_one": true,
+          "exact_contract_is_falsified": true,
+          "input_sha256": {
+            "claim_contract.json": "cd573272f001b2cfc33917c0ea6e70bb88f946f16d34482b1dcf5e02abed29df",
+            "coefficient_audit.csv": "3540023680f7261622d2eef30ddaebb90cd99c655d251f68d7b1d1ca7a1e05e7",
+            "horizon_audit.csv": "51656b81b8b74c534adaedba88d3f0f2d877ff58e2da7b902ccdb440555a4619"
+          },
+          "passed": false,
+          "sgd_reference_coefficient_is_beta_neutral": true
+        },
+        "claim": "claim_4",
+        "failure_injected": true,
+        "passed": false,
+        "scientific_verdict": "FALSIFIED"
+      },
+      "failure_probe_exit_code": 1,
+      "normal": {
+        "checks": {
+          "coefficient_ratio_slope": 2.0,
+          "coefficient_ratio_slope_is_two": true,
+          "displayed_horizon_slope": 2.0000000000000004,
+          "displayed_horizon_slope_is_two_not_one": true,
+          "exact_contract_is_falsified": true,
+          "input_sha256": {
+            "claim_contract.json": "cd573272f001b2cfc33917c0ea6e70bb88f946f16d34482b1dcf5e02abed29df",
+            "coefficient_audit.csv": "3540023680f7261622d2eef30ddaebb90cd99c655d251f68d7b1d1ca7a1e05e7",
+            "horizon_audit.csv": "51656b81b8b74c534adaedba88d3f0f2d877ff58e2da7b902ccdb440555a4619"
+          },
+          "passed": true,
+          "sgd_reference_coefficient_is_beta_neutral": true
+        },
+        "claim": "claim_4",
+        "failure_injected": false,
+        "passed": true,
+        "scientific_verdict": "FALSIFIED"
+      },
+      "normal_exit_code": 0
+    },
+    "claim_5": {
+      "failure_probe": {
+        "checks": {
+          "aggregate_contract_rule_requires_blocked": true,
+          "aggregate_verdict_is_blocked": true,
+          "four_falsification_candidates_audited": true,
+          "input_sha256": {
+            "claim_contract.json": "d80b857dc557f3ea48870afffb6fb3e53914850c87c63c5841f6cf6708f23979",
+            "independent_checker.json": "38c45a847bb4bb20af65b642da10a137bb12217b860f0960e961696667351430",
+            "route_4/candidate_counterexamples.json": "37a21148f6086d3b3cb322823f804aaa4f4ec18728a0968abf9992e4af15cecb"
+          },
+          "no_valid_exact_counterexample": false,
+          "passed": false
+        },
+        "claim": "claim_5",
+        "failure_injected": true,
+        "passed": false,
+        "scientific_verdict": "BLOCKED"
+      },
+      "failure_probe_exit_code": 1,
+      "normal": {
+        "checks": {
+          "aggregate_contract_rule_requires_blocked": true,
+          "aggregate_verdict_is_blocked": true,
+          "four_falsification_candidates_audited": true,
+          "input_sha256": {
+            "claim_contract.json": "d80b857dc557f3ea48870afffb6fb3e53914850c87c63c5841f6cf6708f23979",
+            "independent_checker.json": "38c45a847bb4bb20af65b642da10a137bb12217b860f0960e961696667351430",
+            "route_4/candidate_counterexamples.json": "37a21148f6086d3b3cb322823f804aaa4f4ec18728a0968abf9992e4af15cecb"
+          },
+          "no_valid_exact_counterexample": true,
+          "passed": true
+        },
+        "claim": "claim_5",
+        "failure_injected": false,
+        "passed": true,
+        "scientific_verdict": "BLOCKED"
+      },
+      "normal_exit_code": 0
     }
   }
 }

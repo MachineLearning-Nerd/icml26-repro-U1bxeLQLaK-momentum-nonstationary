@@ -119,9 +119,9 @@ separate. See [limitations](../../evidence/claim_4/limitations.md).
 
 ## Revision, seeds, CPU, and runtime
 
-- Scientific evidence Git SHA:
+- Pre-migration scientific evidence SHA:
   `61faf82dbc11f46c01b156f8b60ef68bc70d5450`.
-- Current verifier code commit:
+- Pre-migration verifier source SHA:
   `a56ee4ac2bb961ee1459245e3a0a3d91b9c73560`.
 - Deterministic seeds: `260112238`, `260112239`.
 - Python `3.12.11`; 8 CPU cores; macOS arm64.

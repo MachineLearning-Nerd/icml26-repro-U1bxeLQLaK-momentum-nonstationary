@@ -13,19 +13,27 @@ tags:
  - paper-U1bxeLQLaK
 ---
 
-# Repro - Momentum SGD under Nonstationary Drift
+# Evaluator-visible evidence surface
 
+This directory is the committed, evaluator-facing text surface for the GitHub
+repository [`MachineLearning-Nerd/icml26-momentum-sgd-nonstationary-optimization`](https://github.com/MachineLearning-Nerd/icml26-momentum-sgd-nonstationary-optimization).
 Start with the **[current evaluator verification](#/current-verification)**.
-It links every current claim page, executable verifier, pinned environment,
-raw file, independent checker, failure probe, and limitation.
+
+The current release contains five claim contracts:
+
+| Claim | Current verdict |
+| --- | --- |
+| 1 | **VERIFIED** within the finite scaling contract |
+| 2 | **BLOCKED** by unresolved universal quantifiers |
+| 3 | **VERIFIED** for the declared full-dimensional witness |
+| 4 | **FALSIFIED** as the imported conjunction |
+| 5 | **BLOCKED** by underspecified source-scale protocol details |
 
 The previous judged pages remain available under **Historical rejected
-baseline**. They are preserved evidence, not the current verification run.
-The current verifier is
-[`campaign/repro/src/published_claim_verifier.py`](campaign/repro/src/published_claim_verifier.py),
-introduced at Git commit
-`a56ee4ac2bb961ee1459245e3a0a3d91b9c73560`, and it supersedes the historical
-page-embedded verifiers.
+baseline**. They are preserved provenance, not the current result. The current
+standalone checker is
+[`campaign/repro/src/published_claim_verifier.py`](campaign/repro/src/published_claim_verifier.py);
+its normal run and injected-failure outputs are linked from each current claim
+page.
 
-This candidate has not received a new evaluator score. The last live score
-remains `3/10`.
+The previous live judge score was `3/10`. This candidate claims no new score.

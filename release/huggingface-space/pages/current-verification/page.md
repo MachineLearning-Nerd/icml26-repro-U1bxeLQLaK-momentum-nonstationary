@@ -5,7 +5,7 @@ score remains **3/10**; none of the verdicts below is a new evaluator score.
 
 The current executable verifier is
 [`campaign/repro/src/published_claim_verifier.py`](../../campaign/repro/src/published_claim_verifier.py),
-introduced at Git commit
+introduced in the pre-migration Git history at commit
 `a56ee4ac2bb961ee1459245e3a0a3d91b9c73560`. It reads only published evidence,
 imports no experiment generator, and supersedes every historical page-embedded
 verifier.
